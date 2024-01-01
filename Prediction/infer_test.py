@@ -94,4 +94,5 @@ def perform_inference(latitude, longitude):
     y_pred_new_location = y_pred_denormalized[:, min_distance_index2, :]
     
     np.set_printoptions(suppress=True, precision=4)
-    print(f"y_pred for new locations: \n{y_pred_new_location}")
+    
+    return y_pred_new_location

@@ -3,6 +3,7 @@ from django.conf import settings
 from .get_weathers import *
 from .infer_test import *
 from rest_framework.decorators import api_view
+from .utils import *
 
 @api_view(['GET'])
 def PredictionView(request):
@@ -13,11 +14,8 @@ def PredictionView(request):
         if latitude and longitude:
             weather_data = perform_inference(latitude=latitude, longitude=longitude)
             
-            print(weather_data)
             data = {
-                'latitude': latitude,
-                'longitude': longitude,
-                'message': 'Received coordinates successfully'
+                'probability': process_weather_data(weather_data),
             }
             return JsonResponse(data)
         else:
