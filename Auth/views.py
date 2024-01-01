@@ -8,6 +8,10 @@ from .serializers import UserSerializer, RegistrationSerializer
 from django.contrib.auth import authenticate, login
 from rest_framework.views import APIView
 from rest_framework.permissions import AllowAny
+# from rest_framework.decorators import api_view, permission_classes
+# from rest_framework.permissions import IsAuthenticated
+# from rest_framework.decorators import api_view, permission_classes
+from django.contrib.auth.models import User
 
 User = get_user_model()
 
@@ -36,3 +40,16 @@ class LoginAPIView(APIView):
             return Response({'token': token.key})
         else:
             return Response({'error': 'Invalid credentials'})
+
+# @api_view(['GET'])
+# @permission_classes([IsAuthenticated])
+# def get_user_info(request):
+#     user = request.user  # The authenticated user
+#     print("hello")
+#     print(User)
+#     user_info = {
+#         'first_name': User.first_name,
+#         'last_name': User.last_name,
+#         # Add other user information you want to expose
+#     }
+#     return Response(user_info)
