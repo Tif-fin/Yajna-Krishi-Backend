@@ -19,3 +19,12 @@ class RegistrationSerializer(serializers.ModelSerializer):
         user = User.objects.create_user(**validated_data)
         Token.objects.create(user=user)
         return user
+
+class ForgotPasswordSerializer(serializers.Serializer):
+    mobile_number = serializers.CharField(max_length=15)
+
+
+class ResetPasswordSerializer(serializers.Serializer):
+    mobile_number = serializers.CharField(max_length=10)
+    reset_code = serializers.CharField(max_length=6)  
+    new_password = serializers.CharField(max_length=128) 

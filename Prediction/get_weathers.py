@@ -1,56 +1,79 @@
-import requests
 import pandas as pd
 from datetime import datetime, timedelta
-import glob
+import requests
+import csv
+from io import StringIO
 
-class WeatherDataRetriever:
-    def __init__(self, input_csv):
-        self.input_csv = input_csv
-        self.data = pd.read_csv(self.input_csv)
-        self.latitudes = self.data['Latitude']
-        self.longitudes = self.data['Longitude']
-        
-    def get_weather_data(self, latitude, longitude):
-        url = "https://power.larc.nasa.gov/api/temporal/daily/point"
-        parameters = "T2M,PRECTOT,PS,QV2M,RH2M,T2MWET,T2M_MAX,T2M_MIN,T2M_RANGE,TS,WS10M,WS10M_MAX,WS10M_MIN,WS10M_RANGE,WS50M,WS50M_MAX,WS50M_MIN,WS50M_RANGE"
-        payload = {
-            "parameters": parameters,
-            "community": "SB",
-            "longitude": longitude,
-            "latitude": latitude,
-            "start": (datetime.now() - timedelta(days=34)).strftime("%Y%m%d"),
-            "end": (datetime.now() - timedelta(days=4)).strftime("%Y%m%d"),
-            "format": "CSV"
-        }
+def get_three_days_back_date():
+    current_date = datetime.now()
+    three_days_back_date = current_date - timedelta(days=3)
+    formatted_date = three_days_back_date.strftime('%Y%m%d')
+    return formatted_date
 
-        response = requests.get(url, params=payload)
-        if response.status_code == 200:
-            return response.text
-        else:
-            print(f"Failed to fetch data for Latitude: {latitude}, Longitude: {longitude}")
-            return None
+def get_forty_four_days_back_date():
+    current_date = datetime.now()
+    forty_four_days_back_date = current_date - timedelta(days=44)
+    formatted_date = forty_four_days_back_date.strftime('%Y%m%d')
+    return formatted_date
 
-    def retrieve_all_weather_data(self):
-        for lat, lon in zip(self.latitudes, self.longitudes):
-            weather_data = self.get_weather_data(lat, lon)
-            if weather_data:
-                file_name = f"weather_data_{lat}_{lon}.csv"
-                with open(file_name, 'w') as file:
-                    file.write(weather_data)
-                    print(f"Weather data for Latitude: {lat}, Longitude: {lon} saved to {file_name}")
+def make_api_call(latitude, longitude, place_name):
+    url = f'https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M,PRECTOT,PS,QV2M,RH2M,T2MWET,T2M_MAX,T2M_MIN,T2M_RANGE,TS,WS10M,WS10M_MAX,WS10M_MIN,WS10M_RANGE,WS50M,WS50M_MAX,WS50M_MIN,WS50M_RANGE&community=SB&longitude={longitude}&latitude={latitude}&start={get_forty_four_days_back_date()}&end={get_three_days_back_date()}&format=CSV'
+    response = requests.get(url)
 
-    def combine_all_weather_data(self):
-        file_list = glob.glob('weather_data_*.csv')
-        dfs = []
+    if response.status_code == 200:
+        content = response.text
+        data = content.split("-END HEADER-")[1]
 
-        for file_name in file_list:
-            df = pd.read_csv(file_name)
-            latitude = float(file_name.split('_')[2])
-            longitude = float(file_name.split('_')[3][:-4])
-            df['Latitude'] = latitude
-            df['Longitude'] = longitude
-            dfs.append(df)
+        # Convert string to CSV format
+        csv_data = StringIO(data)
+        csv_reader = csv.reader(csv_data)
 
-        combined_df = pd.concat(dfs, ignore_index=True)
-        combined_df.to_csv('combined_weather_data.csv', index=False)
-        print("Combined weather data saved to 'combined_weather_data.csv'")
+        # Skip the first row with headers
+        next(csv_reader)
+
+        # Append data to the list
+        csv_file = list(csv_reader)
+        headers = csv_file[0]
+
+        data = csv_file[1:]
+
+        df = pd.DataFrame(data, columns=headers)
+        df['Longitude'] = longitude
+        df['Latitude'] = latitude
+        df['Location'] = place_name
+
+        # Combine 'YEAR', 'MO', and 'DY' columns into a new 'Date' column separated by '-'
+        df['Date'] = df['YEAR'].astype(str) + '-' + df['MO'].astype(str) + '-' + df['DY'].astype(str)
+
+        # Drop the original 'YEAR', 'MO', 'DY' columns
+        df.drop(columns=['YEAR', 'MO', 'DY'], inplace=True)
+
+        # Reorder the columns
+        cols = ['Date', 'Location', 'Latitude', 'Longitude', 'T2M', 'T2MWET', 'TS', 'T2M_RANGE', 'T2M_MAX', 'T2M_MIN', 'QV2M', 'RH2M', 'PRECTOTCORR', 'PS', 'WS10M', 'WS10M_MAX', 'WS10M_MIN', 'WS10M_RANGE', 'WS50M', 'WS50M_MAX', 'WS50M_MIN', 'WS50M_RANGE']
+        df = df[cols]
+
+        return df
+    else:
+        return None
+
+def process_locations_and_return_csv(locations_file_path):
+    df_locations = pd.read_csv(locations_file_path)
+
+    compiled_csv_data = pd.DataFrame()
+
+    for index, row in df_locations.iterrows():
+        place = row['Locations']
+        latitude = row['Latitude']
+        longitude = row['Longitude']
+        print(f"Getting weather data of {place}")
+        api_data = make_api_call(latitude, longitude, place)
+
+        if api_data is not None:
+            compiled_csv_data = pd.concat([compiled_csv_data, api_data])
+
+    print("test data prepared")
+    data_path = 'static/Test_Data/test_data.csv'
+    compiled_csv_data.to_csv(data_path, index=False)
+    return data_path
+
+
