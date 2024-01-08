@@ -8,9 +8,10 @@ from .serializers import *
 from django.contrib.auth import authenticate, login
 from rest_framework.views import APIView
 from rest_framework.permissions import AllowAny
-# from rest_framework.decorators import api_view, permission_classes
-# from rest_framework.permissions import IsAuthenticated
-# from rest_framework.decorators import api_view, permission_classes
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.authentication import TokenAuthentication
+from rest_framework.decorators import api_view, permission_classes, authentication_classes
 from django.contrib.auth.models import User
 from .models import CustomUser
 
@@ -37,7 +38,7 @@ class LoginAPIView(APIView):
         user = authenticate(username=username, password=password)
 
         if user is not None:
-            login(request, user)
+            # login(request, user)
             token, created = Token.objects.get_or_create(user=user)
             return Response({'token': token.key})
         else:
@@ -87,15 +88,14 @@ class ResetPasswordAPIView(APIView):
             else:
                 return Response({'error': 'User with this mobile number does not exists'})
 
-# @api_view(['GET'])
-# @permission_classes([IsAuthenticated])
-# def get_user_info(request):
-#     user = request.user  # The authenticated user
-#     print("hello")
-#     print(User)
-#     user_info = {
-#         'first_name': User.first_name,
-#         'last_name': User.last_name,
-#         # Add other user information you want to expose
-#     }
-#     return Response(user_info)
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+@authentication_classes([TokenAuthentication])
+def get_user_info(request):
+    user = request.user  
+    user_info = {
+        'first_name': user.first_name,
+        'last_name': user.last_name,
+        'mobile': user.username
+    }
+    return Response(user_info)
