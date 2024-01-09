@@ -3,6 +3,7 @@ from .get_weathers import *
 from rest_framework.decorators import api_view
 from .utils import *
 from .models import WeatherPrediction
+from django.db.models import Max
 
 @api_view(['GET'])
 def Prediction(request):
@@ -19,15 +20,32 @@ def Prediction(request):
         
             min_distance_index = df_locations['Distance'].idxmin()
             location = df_locations.iloc[min_distance_index]
+            
+            nearest_places = df_locations.nsmallest(5, 'Distance')['Locations'].tolist()
 
-            data_for_current_place = WeatherPrediction.objects.filter(place_name=location['Locations'])
+            data_near_place = []
+            for place in nearest_places:
+                data_for_near_place = WeatherPrediction.objects.filter(place_name=place).last()
+                data_near = {}
+                data_near['id'] = data_for_near_place.id
+                data_near['latitude'] = data_for_near_place.latitude
+                data_near['longitude'] = data_for_near_place.longitude
+                data_near['predicted_weather'] = data_for_near_place.predicted_weather
+                data_near['late_blight_probability'] = data_for_near_place.lateblight_probability
+                data_near['place_name'] = data_for_near_place.place_name
+                data_near['predicted_date'] = data_for_near_place.prediction_date
+
+                data_near_place.append(data_near)
+
+
+            data_for_current_place = WeatherPrediction.objects.filter(place_name=location['Locations']).last()
             
             data = {}
-            for data_entry in data_for_current_place:
-                data['latitude'] = latitude,
-                data['longitude'] = longitude,
-                data['probability'] = data_entry.lateblight_probability,
-                data['predicted_date'] = data_entry.prediction_date
+            data['latitude'] = latitude
+            data['longitude'] = longitude
+            data['probability'] = data_for_current_place.lateblight_probability
+            data['predicted_date'] = data_for_current_place.prediction_date
+            data['near_places'] = data_near_place
             
             return JsonResponse(data)
         else:

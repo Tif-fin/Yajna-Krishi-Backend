@@ -8,6 +8,6 @@ scheduled = False
 def start():
     global scheduled
     if not scheduled:
-        scheduler.add_job(PrepareProbabilities, 'cron', hour=5, minute=45) #change the time later making it 00 in nepali time
+        scheduler.add_job(PrepareProbabilities, 'cron', hour=0, minute=15) #change the time later making it 00 in nepali time
         scheduler.start()
         scheduled = True

@@ -1,7 +1,4 @@
 import logging
-from django.core.management.base import BaseCommand
-from geopy.distance import geodesic
-from geopy.point import Point
 from Prediction.test_data_loader import * 
 from Prediction.model import *  
 import pandas as pd
@@ -10,6 +7,8 @@ import torch
 from Prediction.models import WeatherPrediction
 from Prediction.utils import *
 from Prediction.get_weathers import process_locations_and_return_csv
+from django.db import IntegrityError
+from datetime import datetime
 
 
 def PrepareProbabilities():
@@ -19,6 +18,9 @@ def PrepareProbabilities():
     handler.setFormatter(formatter)
     logger.addHandler(handler)
     logger.setLevel(logging.INFO)
+
+    logger.info("Started preparing data")
+
     stations_path = 'static/Stations/stations.txt'
     locations_path = "static/Locations/locations.csv"
     weights_path = 'static/WeatherModel_Weight_150.pth'
@@ -82,22 +84,26 @@ def PrepareProbabilities():
     df_locations = pd.read_csv(locations_path)
     try:
         for index, row in df_locations.iterrows():
-            WeatherPrediction.objects.create(
-                longitude=row['Longitude'],
-                latitude=row['Latitude'],
-                place_name = row['Locations'],
-                predicted_weather=y_pred_denormalized[:, index].tolist(),
-                lateblight_probability=process_weather_data(y_pred_denormalized[:, index].tolist())
-            )
-        logger.info("Data updated in the database")
+            try:
+                obj, created = WeatherPrediction.objects.get_or_create(
+                    longitude=row['Longitude'],
+                    latitude=row['Latitude'],
+                    place_name = row['Locations'],
+                    predicted_weather=y_pred_denormalized[:, index].tolist(),
+                    lateblight_probability=process_weather_data(y_pred_denormalized[:, index].tolist())
+                )
+                if created:
+                    print("New entry created.")
+                else:
+                    # The entry already existed
+                    print("Entry already exists.")
+            except IntegrityError:
+                print("IntegrityError: Duplicate entry.")
+            logger.info("Data updated in the database")
     except Exception as ex:
         # Handle any other exceptions
         logger.error("Error while preparing the data:", ex) 
     finally:
-        print("Schedular run at 5:45 utc")
+        current_time = datetime.utcnow().strftime('%H:%M')
+        logger.info(f"Schedular run at {current_time} UTC")
 
-def main():
-    PrepareProbabilities()
-
-if __name__ == "__main__":
-    main()

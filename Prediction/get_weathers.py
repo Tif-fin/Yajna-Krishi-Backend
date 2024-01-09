@@ -61,12 +61,22 @@ def process_locations_and_return_csv(locations_file_path):
 
     compiled_csv_data = pd.DataFrame()
 
+    prev_longitude = ""
+    prev_latitude = ""
+
     for index, row in df_locations.iterrows():
         place = row['Locations']
         latitude = row['Latitude']
         longitude = row['Longitude']
-        print(f"Getting weather data of {place}")
-        api_data = make_api_call(latitude, longitude, place)
+
+        if prev_latitude == latitude and prev_longitude == longitude:
+            pass
+        else:
+            print(f"Getting weather data of {place}")
+            api_data = make_api_call(latitude, longitude, place)
+
+        prev_longitude = longitude
+        prev_latitude = latitude
 
         if api_data is not None:
             compiled_csv_data = pd.concat([compiled_csv_data, api_data])

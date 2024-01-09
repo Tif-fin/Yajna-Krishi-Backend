@@ -1,5 +1,7 @@
 import numpy as np
 import torch
+from geopy.distance import geodesic
+from geopy.point import Point
 
 
 def indexFunction(precipitaion_vec, min_temperature, relative_humidity):

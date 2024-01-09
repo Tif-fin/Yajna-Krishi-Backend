@@ -9,5 +9,8 @@ class WeatherPrediction(models.Model):
     place_name = models.CharField(max_length = 100)
     prediction_date = models.DateField(default=timezone.now)
 
+    class meta:
+        unique_together = ['predicted_weather', 'late_blight_probability', 'predection_date']
+        
     def __str__(self):
         return f"Late Blight Prediction for {self.place_name} is  {self.lateblight_probability * 100}% on {self.prediction_date}"
