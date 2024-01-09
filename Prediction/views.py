@@ -1,7 +1,5 @@
 from django.http import JsonResponse
-from django.conf import settings
 from .get_weathers import *
-from .infer_test import *
 from rest_framework.decorators import api_view
 from .utils import *
 from .models import WeatherPrediction

@@ -37,3 +37,12 @@ def process_weather_data(data):
 
 
 
+def geodesic_distance(lat1, lon1, lat2, lon2):
+    # Create Point objects for the coordinates
+    point1 = Point(latitude=lat1, longitude=lon1)
+    point2 = Point(latitude=lat2, longitude=lon2)
+
+    # Calculate the geodesic distance using Vincenty formula
+    distance = geodesic(point1, point2).kilometers
+
+    return distance

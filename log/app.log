@@ -1,0 +1,361 @@
+INFO 2024-01-09 04:28:26,376 autoreload 94662 140640254353408 Watching for file changes with StatReloader
+INFO 2024-01-09 04:28:53,073 autoreload 94662 140640254353408 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Late_Blight_Backend/settings.py changed, reloading.
+INFO 2024-01-09 04:28:53,810 autoreload 94825 140407598161920 Watching for file changes with StatReloader
+INFO 2024-01-09 04:29:21,450 autoreload 94825 140407598161920 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Late_Blight_Backend/settings.py changed, reloading.
+INFO 2024-01-09 04:29:22,207 autoreload 95000 140498492907520 Watching for file changes with StatReloader
+INFO 2024-01-09 04:30:16,533 basehttp 95000 140494102816320 "GET /prediction/lateblight/data?lat=37.4219983&long=-122.084 HTTP/1.1" 200 112
+INFO 2024-01-09 04:35:09,693 basehttp 95000 140494102816320 "GET /prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:39:43,079 basehttp 95000 140494017394240 "GET /prediction/lateblight/data?lat=37.4219983&long=-122.084 HTTP/1.1" 200 112
+INFO 2024-01-09 04:39:47,927 basehttp 95000 140494009001536 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:43:05,554 basehttp 95000 140494009001536 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:43:05,666 basehttp 95000 140494017394240 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:43:23,129 basehttp 95000 140494000608832 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:44:00,797 basehttp 95000 140493992216128 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:44:56,428 autoreload 95000 140498492907520 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Late_Blight_Backend/settings.py changed, reloading.
+INFO 2024-01-09 04:44:57,239 autoreload 96977 139788902264832 Watching for file changes with StatReloader
+INFO 2024-01-09 04:45:17,791 autoreload 96977 139788902264832 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Late_Blight_Backend/settings.py changed, reloading.
+INFO 2024-01-09 04:45:18,636 autoreload 97102 140169282179072 Watching for file changes with StatReloader
+INFO 2024-01-09 04:45:55,427 basehttp 97102 140164892374592 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:45:58,387 basehttp 97102 140164892374592 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:46:23,809 basehttp 97102 140164881884736 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:46:26,469 basehttp 97102 140164881884736 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:46:36,419 basehttp 97102 140164873492032 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:46:38,817 basehttp 97102 140164873492032 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:46:39,249 basehttp 97102 140164865099328 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:46:57,197 basehttp 97102 140164647089728 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:48:08,208 basehttp 97102 140164881884736 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:48:25,719 basehttp 97102 140164865099328 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:48:55,829 basehttp 97102 140164647089728 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:48:59,877 basehttp 97102 140164873492032 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:49:00,281 basehttp 97102 140164892374592 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:49:04,044 basehttp 97102 140164892374592 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:49:08,780 basehttp 97102 140164638697024 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+2024-01-09 04:49:09,074 - builtins - INFO - Testing logging from Django shell
+INFO 2024-01-09 04:49:17,073 basehttp 97102 140164630304320 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:49:17,211 basehttp 97102 140164621911616 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:49:19,806 basehttp 97102 140164621911616 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:49:23,349 basehttp 97102 140164621911616 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:49:28,951 basehttp 97102 140164613518912 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:49:53,740 basehttp 97102 140164881884736 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:49:53,834 basehttp 97102 140164605126208 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:50:14,013 basehttp 97102 140164865099328 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:50:55,583 basehttp 97102 140164621911616 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:50:55,747 basehttp 97102 140164630304320 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:51:06,540 basehttp 97102 140164613518912 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:51:14,225 basehttp 97102 140164638697024 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:51:14,330 basehttp 97102 140164892374592 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:51:17,530 basehttp 97102 140164892374592 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:51:38,493 basehttp 97102 140164605126208 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:51:41,085 basehttp 97102 140164605126208 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:52:02,017 basehttp 97102 140164865099328 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:52:02,110 basehttp 97102 140164881884736 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:52:06,180 basehttp 97102 140164873492032 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:52:16,272 basehttp 97102 140164647089728 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:52:53,139 basehttp 97102 140164892374592 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:52:53,247 basehttp 97102 140164638697024 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:53:02,908 basehttp 97102 140164613518912 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:53:10,860 basehttp 97102 140164630304320 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:53:26,609 basehttp 97102 140164605126208 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:53:38,300 basehttp 97102 140164873492032 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:53:45,065 basehttp 97102 140164881884736 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:53:45,272 basehttp 97102 140164865099328 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:53:49,054 basehttp 97102 140164865099328 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:53:56,690 basehttp 97102 140164647089728 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:53:57,040 basehttp 97102 140164621911616 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:54:01,114 basehttp 97102 140164621911616 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:54:01,346 basehttp 97102 140164647089728 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:54:18,033 autoreload 97102 140169282179072 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Late_Blight_Backend/settings.py changed, reloading.
+INFO 2024-01-09 04:54:18,860 autoreload 99457 140382598426624 Watching for file changes with StatReloader
+INFO 2024-01-09 04:54:23,760 autoreload 99457 140382598426624 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Late_Blight_Backend/settings.py changed, reloading.
+INFO 2024-01-09 04:54:24,628 autoreload 99520 140435066257408 Watching for file changes with StatReloader
+INFO 2024-01-09 04:54:29,278 basehttp 99520 140430676551232 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:54:43,224 basehttp 99520 140430598469184 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:54:43,283 basehttp 99520 140430590076480 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:54:48,748 basehttp 99520 140430581683776 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:54:48,977 basehttp 99520 140430573291072 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:55:02,196 basehttp 99520 140430564898368 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:55:02,474 basehttp 99520 140430556505664 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:55:12,526 basehttp 99520 140430548112960 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:55:33,924 autoreload 99520 140435066257408 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Late_Blight_Backend/settings.py changed, reloading.
+INFO 2024-01-09 04:55:34,748 autoreload 99784 140375861497856 Watching for file changes with StatReloader
+INFO 2024-01-09 04:56:13,322 basehttp 99784 140371471386176 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:57:23,986 basehttp 99784 140371460896320 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:57:37,314 basehttp 99784 140371452503616 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:57:52,480 basehttp 99784 140371471386176 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:57:52,835 basehttp 99784 140371444110912 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:58:31,376 basehttp 99784 140371435718208 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:58:55,500 basehttp 99784 140371460896320 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:58:56,265 basehttp 99784 140371427325504 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:58:59,558 basehttp 99784 140371460896320 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:59:07,668 basehttp 99784 140371418932800 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:59:22,473 basehttp 99784 140371452503616 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:59:28,313 basehttp 99784 140371444110912 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:59:28,515 basehttp 99784 140371471386176 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:59:31,721 basehttp 99784 140371444110912 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:59:34,636 basehttp 99784 140371471386176 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:59:40,300 basehttp 99784 140370939737664 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 04:59:45,172 basehttp 99784 140370931344960 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:00:04,434 basehttp 99784 140371435718208 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:00:12,958 basehttp 99784 140370922952256 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:00:13,330 basehttp 99784 140370914559552 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:00:21,970 basehttp 99784 140370906166848 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:00:34,974 basehttp 99784 140371460896320 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:00:35,179 basehttp 99784 140371427325504 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:00:39,276 basehttp 99784 140371418932800 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:00:50,252 basehttp 99784 140370897774144 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:00:50,437 basehttp 99784 140370889381440 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:01:05,082 basehttp 99784 140371471386176 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:01:08,025 basehttp 99784 140371471386176 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:01:08,394 basehttp 99784 140371444110912 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:01:39,897 basehttp 99784 140371435718208 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+2024-01-09 05:01:55,684 - Prediction.cron - INFO - Testing logging from Django shell
+INFO 2024-01-09 05:02:08,820 basehttp 99784 140371427325504 "GET /prediction/lateblight/data?lat=37.4219983&long=-122.084 HTTP/1.1" 200 112
+INFO 2024-01-09 05:02:16,445 basehttp 99784 140371418932800 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:04:24,049 basehttp 99784 140371418932800 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:04:42,285 basehttp 99784 140371427325504 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:05:08,981 autoreload 99784 140375861497856 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Late_Blight_Backend/settings.py changed, reloading.
+INFO 2024-01-09 05:06:23,321 autoreload 101532 140546188959744 Watching for file changes with StatReloader
+INFO 2024-01-09 05:06:38,625 autoreload 101532 140546188959744 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Late_Blight_Backend/settings.py changed, reloading.
+INFO 2024-01-09 05:06:39,383 autoreload 101608 140623165296640 Watching for file changes with StatReloader
+INFO 2024-01-09 05:06:42,189 basehttp 101608 140618777454144 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:06:42,499 basehttp 101608 140618766964288 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:06:48,338 basehttp 101608 140618758571584 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:07:10,725 basehttp 101608 140618749130304 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:07:20,669 basehttp 101608 140618740737600 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:09:11,262 autoreload 101608 140623165296640 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Late_Blight_Backend/settings.py changed, reloading.
+INFO 2024-01-09 05:09:12,037 autoreload 102080 139914460626944 Watching for file changes with StatReloader
+INFO 2024-01-09 05:09:46,858 basehttp 102080 139910070855232 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:10:06,694 basehttp 102080 139910060365376 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:10:06,701 basehttp 102080 139910051972672 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:10:09,846 basehttp 102080 139910060365376 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:10:16,842 basehttp 102080 139909834733120 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:10:19,587 basehttp 102080 139909834733120 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:10:51,886 basehttp 102080 139909826340416 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:12:11,311 basehttp 102080 139909834733120 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:12:21,862 basehttp 102080 139910060365376 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:12:22,070 basehttp 102080 139910051972672 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:12:27,184 basehttp 102080 139909826340416 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:13:35,184 basehttp 102080 139910070855232 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:13:35,455 basehttp 102080 139909817947712 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:14:17,062 basehttp 102080 139909826340416 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:14:22,398 basehttp 102080 139910051972672 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:14:33,036 basehttp 102080 139910060365376 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:14:43,485 basehttp 102080 139909834733120 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:14:53,838 basehttp 102080 139909809555008 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:14:54,234 basehttp 102080 139909801162304 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:15:19,017 basehttp 102080 139909817947712 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:15:19,324 basehttp 102080 139910070855232 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:15:28,370 basehttp 102080 139909792769600 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:16:02,651 basehttp 102080 139910051972672 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:16:10,626 basehttp 102080 139910060365376 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:16:23,222 basehttp 102080 139909834733120 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:16:33,874 basehttp 102080 139909801162304 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:16:34,171 basehttp 102080 139909809555008 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:16:43,395 basehttp 102080 139909826340416 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:16:43,603 basehttp 102080 139909784376896 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:16:47,877 basehttp 102080 139909784376896 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:16:53,536 basehttp 102080 139910070855232 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:17:07,873 basehttp 102080 139909792769600 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:17:10,396 autoreload 102080 139914460626944 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Prediction/apps.py changed, reloading.
+INFO 2024-01-09 05:17:11,233 autoreload 103502 139639513837568 Watching for file changes with StatReloader
+INFO 2024-01-09 05:17:53,818 autoreload 103502 139639513837568 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Prediction/apps.py changed, reloading.
+INFO 2024-01-09 05:17:54,138 autoreload 103554 140443147149312 Watching for file changes with StatReloader
+INFO 2024-01-09 05:18:15,253 basehttp 103554 140438680815168 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:18:20,489 basehttp 103554 140438670325312 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:18:39,780 autoreload 103554 140443147149312 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Late_Blight_Backend/settings.py changed, reloading.
+INFO 2024-01-09 05:18:40,535 autoreload 103734 140402133520384 Watching for file changes with StatReloader
+INFO 2024-01-09 05:19:05,827 autoreload 103734 140402133520384 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Late_Blight_Backend/settings.py changed, reloading.
+INFO 2024-01-09 05:19:06,051 autoreload 103817 140670784991232 Watching for file changes with StatReloader
+INFO 2024-01-09 05:19:19,264 autoreload 103817 140670784991232 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Late_Blight_Backend/settings.py changed, reloading.
+INFO 2024-01-09 05:19:19,483 autoreload 103867 140145238294528 Watching for file changes with StatReloader
+INFO 2024-01-09 05:19:23,639 autoreload 103867 140145238294528 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Late_Blight_Backend/settings.py changed, reloading.
+INFO 2024-01-09 05:19:23,920 autoreload 103892 140191357575168 Watching for file changes with StatReloader
+INFO 2024-01-09 05:19:29,955 autoreload 103892 140191357575168 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Late_Blight_Backend/settings.py changed, reloading.
+INFO 2024-01-09 05:19:30,839 autoreload 103956 140293272616960 Watching for file changes with StatReloader
+INFO 2024-01-09 05:19:42,151 autoreload 103956 140293272616960 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Prediction/cron.py changed, reloading.
+INFO 2024-01-09 05:19:42,941 autoreload 104018 140435158822912 Watching for file changes with StatReloader
+INFO 2024-01-09 05:20:40,650 basehttp 104018 140430692542016 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+2024-01-09 05:20:42,935 - Prediction.cron - INFO - Testing logging from Django shell
+2024-01-09 05:21:42,934 - Prediction.cron - INFO - Testing logging from Django shell
+2024-01-09 05:21:42,934 - Prediction.cron - INFO - Testing logging from Django shell
+2024-01-09 05:22:42,934 - Prediction.cron - INFO - Testing logging from Django shell
+2024-01-09 05:22:42,934 - Prediction.cron - INFO - Testing logging from Django shell
+2024-01-09 05:22:42,934 - Prediction.cron - INFO - Testing logging from Django shell
+2024-01-09 05:23:42,934 - Prediction.cron - INFO - Testing logging from Django shell
+2024-01-09 05:23:42,934 - Prediction.cron - INFO - Testing logging from Django shell
+2024-01-09 05:23:42,934 - Prediction.cron - INFO - Testing logging from Django shell
+2024-01-09 05:23:42,934 - Prediction.cron - INFO - Testing logging from Django shell
+INFO 2024-01-09 05:23:54,094 basehttp 104018 140430692542016 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:23:59,268 autoreload 104018 140435158822912 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Prediction/apps.py changed, reloading.
+INFO 2024-01-09 05:24:00,290 autoreload 104506 140347713626112 Watching for file changes with StatReloader
+INFO 2024-01-09 05:24:05,520 autoreload 104506 140347713626112 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Prediction/apps.py changed, reloading.
+INFO 2024-01-09 05:24:06,391 autoreload 104607 139929941970944 Watching for file changes with StatReloader
+INFO 2024-01-09 05:24:20,406 basehttp 104607 139925475771968 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+2024-01-09 05:25:06,385 - Prediction.cron - INFO - Testing logging from Django shell
+INFO 2024-01-09 05:25:15,174 basehttp 104607 139925456889408 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:25:19,793 basehttp 104607 139925448496704 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:25:20,685 basehttp 104607 139925440104000 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:25:25,802 basehttp 104607 139925431711296 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+2024-01-09 05:26:06,384 - Prediction.cron - INFO - Testing logging from Django shell
+2024-01-09 05:26:06,384 - Prediction.cron - INFO - Testing logging from Django shell
+INFO 2024-01-09 05:26:08,333 basehttp 104607 139925475771968 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:26:08,600 basehttp 104607 139925423318592 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:26:36,408 autoreload 104607 139929941970944 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Prediction/Schedule/updater.py changed, reloading.
+2024-01-09 05:26:37,214 - Prediction.cron - INFO - Testing logging from Django shell
+INFO 2024-01-09 05:26:37,219 autoreload 104931 140368077230080 Watching for file changes with StatReloader
+INFO 2024-01-09 05:26:41,481 autoreload 104931 140368077230080 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Prediction/Schedule/updater.py changed, reloading.
+INFO 2024-01-09 05:26:41,805 autoreload 104955 139964904091648 Watching for file changes with StatReloader
+INFO 2024-01-09 05:27:07,523 autoreload 104955 139964904091648 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Prediction/apps.py changed, reloading.
+INFO 2024-01-09 05:27:08,377 autoreload 105083 139926207180800 Watching for file changes with StatReloader
+INFO 2024-01-09 05:28:10,066 basehttp 105083 139921817298496 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:28:10,134 basehttp 105083 139921807857216 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:28:39,678 basehttp 105083 139921798415936 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:28:40,092 basehttp 105083 139921790023232 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:28:53,804 basehttp 105083 139921578784320 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:28:57,857 basehttp 105083 139921570391616 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:29:15,013 basehttp 105083 139921561998912 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:29:20,530 basehttp 105083 139921553606208 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:29:28,700 basehttp 105083 139921545213504 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:29:39,166 basehttp 105083 139921536820800 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:29:45,437 basehttp 105083 139921807857216 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:29:49,769 basehttp 105083 139921817298496 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:34:40,114 basehttp 105083 139921817298496 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:34:42,667 basehttp 105083 139921817298496 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:34:52,104 basehttp 105083 139921807857216 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:35:02,752 basehttp 105083 139921536820800 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:35:14,699 basehttp 105083 139921545213504 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:35:21,081 basehttp 105083 139921798415936 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:35:25,387 basehttp 105083 139921798415936 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:35:43,097 basehttp 105083 139921790023232 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:35:43,104 basehttp 105083 139921578784320 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:35:52,613 basehttp 105083 139921570391616 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:35:58,973 basehttp 105083 139921561998912 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:35:59,098 basehttp 105083 139921553606208 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:36:07,465 basehttp 105083 139921528428096 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:36:13,081 basehttp 105083 139921817298496 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:36:33,917 basehttp 105083 139921536820800 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:36:52,418 basehttp 105083 139921545213504 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:37:05,758 basehttp 105083 139921798415936 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:37:10,544 basehttp 105083 139921807857216 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:37:17,199 basehttp 105083 139921578784320 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:38:14,552 basehttp 105083 139921536820800 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:43:14,897 basehttp 105083 139921536820800 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:43:14,950 basehttp 105083 139921578784320 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:43:23,770 basehttp 105083 139921807857216 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:43:27,883 basehttp 105083 139921798415936 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:44:10,096 basehttp 105083 139921817298496 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:44:46,451 basehttp 105083 139921578784320 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:47:19,251 basehttp 105083 139921578784320 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:47:23,672 autoreload 105083 139926207180800 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Prediction/apps.py changed, reloading.
+INFO 2024-01-09 05:47:24,472 autoreload 106923 140565963108352 Watching for file changes with StatReloader
+INFO 2024-01-09 05:47:53,112 basehttp 106923 140561496696384 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:47:58,337 basehttp 106923 140561486206528 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:48:00,756 basehttp 106923 140561486206528 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:48:12,669 basehttp 106923 140561477813824 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+2024-01-09 05:48:24,466 - Prediction.cron - INFO - Testing logging from Django shell
+INFO 2024-01-09 05:48:34,485 basehttp 106923 140561252083264 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:48:51,213 basehttp 106923 140561243690560 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:49:01,005 basehttp 106923 140561235297856 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:49:01,176 basehttp 106923 140561226905152 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:49:03,873 basehttp 106923 140561226905152 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:49:10,944 basehttp 106923 140561218512448 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:49:18,210 basehttp 106923 140561210119744 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+2024-01-09 05:49:24,465 - Prediction.cron - INFO - Testing logging from Django shell
+2024-01-09 05:49:24,465 - Prediction.cron - INFO - Testing logging from Django shell
+INFO 2024-01-09 05:49:32,865 autoreload 106923 140565963108352 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Late_Blight_Backend/settings.py changed, reloading.
+INFO 2024-01-09 05:49:33,716 autoreload 107339 140410710269952 Watching for file changes with StatReloader
+INFO 2024-01-09 05:49:57,942 basehttp 107339 140406243944000 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:50:01,032 basehttp 107339 140406243944000 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:50:07,196 basehttp 107339 140406233454144 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:50:07,207 basehttp 107339 140406225061440 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:50:09,344 basehttp 107339 140406216668736 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+2024-01-09 05:50:33,710 - Prediction.cron - INFO - Testing logging from Django shell
+INFO 2024-01-09 05:50:34,568 basehttp 107339 140406199883328 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:50:39,290 basehttp 107339 140406191490624 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:50:43,676 basehttp 107339 140406183097920 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:50:53,237 basehttp 107339 140405702129216 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:50:55,342 basehttp 107339 140405702129216 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:51:06,038 basehttp 107339 140405693736512 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:51:14,437 basehttp 107339 140405685343808 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:51:21,310 basehttp 107339 140405676951104 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+2024-01-09 05:51:33,710 - Prediction.cron - INFO - Testing logging from Django shell
+2024-01-09 05:51:33,710 - Prediction.cron - INFO - Testing logging from Django shell
+INFO 2024-01-09 05:51:59,558 autoreload 107339 140410710269952 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Prediction/Schedule/updater.py changed, reloading.
+INFO 2024-01-09 05:52:00,366 autoreload 107815 140719478009856 Watching for file changes with StatReloader
+INFO 2024-01-09 05:52:44,879 basehttp 107815 140715013924416 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:52:45,100 basehttp 107815 140715004483136 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:52:54,536 basehttp 107815 140714995041856 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+2024-01-09 05:53:00,359 - Prediction.cron - INFO - Testing logging from Django shell
+INFO 2024-01-09 05:53:07,478 basehttp 107815 140714978256448 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:53:21,514 basehttp 107815 140714969863744 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:53:30,126 basehttp 107815 140714961471040 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:53:30,341 basehttp 107815 140714953078336 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+2024-01-09 05:54:00,359 - Prediction.cron - INFO - Testing logging from Django shell
+2024-01-09 05:54:00,359 - Prediction.cron - INFO - Testing logging from Django shell
+INFO 2024-01-09 05:54:10,181 basehttp 107815 140714470012480 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+2024-01-09 05:55:00,359 - Prediction.cron - INFO - Testing logging from Django shell
+2024-01-09 05:55:00,359 - Prediction.cron - INFO - Testing logging from Django shell
+2024-01-09 05:55:00,359 - Prediction.cron - INFO - Testing logging from Django shell
+INFO 2024-01-09 05:55:16,765 basehttp 107815 140714953078336 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:55:19,850 basehttp 107815 140714961471040 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:55:20,088 basehttp 107815 140714953078336 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:55:32,692 basehttp 107815 140714969863744 "GET /prediction/lateblight/data?lat=37.4219983&long=-122.084 HTTP/1.1" 200 112
+INFO 2024-01-09 05:55:40,262 basehttp 107815 140714978256448 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:55:49,260 basehttp 107815 140714470012480 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:55:56,648 basehttp 107815 140715013924416 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+2024-01-09 05:56:00,359 - Prediction.cron - INFO - Testing logging from Django shell
+2024-01-09 05:56:00,359 - Prediction.cron - INFO - Testing logging from Django shell
+2024-01-09 05:56:00,359 - Prediction.cron - INFO - Testing logging from Django shell
+2024-01-09 05:56:00,359 - Prediction.cron - INFO - Testing logging from Django shell
+INFO 2024-01-09 05:56:05,820 basehttp 107815 140715004483136 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:56:08,380 basehttp 107815 140715004483136 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:56:33,197 basehttp 107815 140714995041856 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+INFO 2024-01-09 05:56:56,732 basehttp 107815 140714953078336 "GET //prediction/lateblight/all HTTP/1.1" 200 102771
+2024-01-09 05:57:00,359 - Prediction.cron - INFO - Testing logging from Django shell
+2024-01-09 05:57:00,359 - Prediction.cron - INFO - Testing logging from Django shell
+2024-01-09 05:57:00,359 - Prediction.cron - INFO - Testing logging from Django shell
+2024-01-09 05:57:00,359 - Prediction.cron - INFO - Testing logging from Django shell
+2024-01-09 05:57:00,359 - Prediction.cron - INFO - Testing logging from Django shell
+2024-01-09 05:58:00,359 - Prediction.cron - INFO - Testing logging from Django shell
+2024-01-09 05:58:00,359 - Prediction.cron - INFO - Testing logging from Django shell
+2024-01-09 05:58:00,359 - Prediction.cron - INFO - Testing logging from Django shell
+2024-01-09 05:58:00,359 - Prediction.cron - INFO - Testing logging from Django shell
+2024-01-09 05:58:00,359 - Prediction.cron - INFO - Testing logging from Django shell
+2024-01-09 05:58:00,359 - Prediction.cron - INFO - Testing logging from Django shell
+INFO 2024-01-09 05:58:10,557 autoreload 107815 140719478009856 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Prediction/Schedule/updater.py changed, reloading.
+INFO 2024-01-09 05:58:11,501 autoreload 108662 140387593281536 Watching for file changes with StatReloader
+INFO 2024-01-09 05:58:38,026 autoreload 108662 140387593281536 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Prediction/Schedule/updater.py changed, reloading.
+INFO 2024-01-09 05:58:38,410 autoreload 108762 139662768349184 Watching for file changes with StatReloader
+INFO 2024-01-09 05:58:54,800 autoreload 108762 139662768349184 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Prediction/Schedule/updater.py changed, reloading.
+INFO 2024-01-09 05:58:55,137 autoreload 108807 139678929031168 Watching for file changes with StatReloader
+2024-01-09 06:00:00,001 - Prediction.cron - INFO - Testing logging from Django shell
+INFO 2024-01-09 06:01:39,295 autoreload 108807 139678929031168 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Prediction/Schedule/updater.py changed, reloading.
+INFO 2024-01-09 06:01:40,137 autoreload 109054 139906503626752 Watching for file changes with StatReloader
+INFO 2024-01-09 06:03:06,795 autoreload 109054 139906503626752 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Prediction/cron.py changed, reloading.
+INFO 2024-01-09 06:03:07,616 autoreload 109214 139695866064896 Watching for file changes with StatReloader
+INFO 2024-01-09 06:03:37,153 autoreload 109214 139695866064896 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Prediction/cron.py changed, reloading.
+INFO 2024-01-09 06:03:37,456 autoreload 109269 140058631839744 Watching for file changes with StatReloader
+INFO 2024-01-09 06:03:56,884 autoreload 109269 140058631839744 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Prediction/cron.py changed, reloading.
+INFO 2024-01-09 06:03:57,196 autoreload 109333 139683799429120 Watching for file changes with StatReloader
+INFO 2024-01-09 06:04:46,948 autoreload 109333 139683799429120 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Prediction/cron.py changed, reloading.
+INFO 2024-01-09 06:04:49,423 autoreload 109389 139870290501632 Watching for file changes with StatReloader
+INFO 2024-01-09 06:06:37,336 autoreload 109389 139870290501632 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Prediction/cron.py changed, reloading.
+INFO 2024-01-09 06:06:40,299 autoreload 109569 140031217942528 Watching for file changes with StatReloader
+INFO 2024-01-09 06:06:47,896 autoreload 109569 140031217942528 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Prediction/cron.py changed, reloading.
+INFO 2024-01-09 06:06:50,876 autoreload 109643 140182460198912 Watching for file changes with StatReloader
+INFO 2024-01-09 06:06:55,427 autoreload 109643 140182460198912 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Prediction/cron.py changed, reloading.
+INFO 2024-01-09 06:06:58,326 autoreload 109717 139721328398336 Watching for file changes with StatReloader
+INFO 2024-01-09 06:07:23,332 autoreload 109717 139721328398336 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Prediction/Schedule/updater.py changed, reloading.
+INFO 2024-01-09 06:07:26,246 autoreload 109824 139936387690496 Watching for file changes with StatReloader
+INFO 2024-01-09 06:09:17,628 autoreload 109824 139936387690496 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Prediction/infer_test.py changed, reloading.
+INFO 2024-01-09 06:09:21,152 autoreload 110060 140096798736384 Watching for file changes with StatReloader
+INFO 2024-01-09 06:09:29,121 autoreload 110060 140096798736384 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Prediction/utils.py changed, reloading.
+INFO 2024-01-09 06:09:32,187 autoreload 110139 140621048467456 Watching for file changes with StatReloader
+INFO 2024-01-09 06:09:48,450 autoreload 110139 140621048467456 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Prediction/views.py changed, reloading.
+INFO 2024-01-09 06:09:51,351 autoreload 110225 140457124081664 Watching for file changes with StatReloader
+INFO 2024-01-09 06:10:02,434 autoreload 110225 140457124081664 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Prediction/views.py changed, reloading.
+INFO 2024-01-09 06:10:05,586 autoreload 110317 140353865764864 Watching for file changes with StatReloader
+INFO 2024-01-09 06:10:11,526 autoreload 110317 140353865764864 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Prediction/views.py changed, reloading.
+INFO 2024-01-09 06:10:14,476 autoreload 110417 139970871414784 Watching for file changes with StatReloader
+INFO 2024-01-09 06:10:21,428 autoreload 110417 139970871414784 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Prediction/views.py changed, reloading.
+INFO 2024-01-09 06:10:24,358 autoreload 110493 139655824416768 Watching for file changes with StatReloader
