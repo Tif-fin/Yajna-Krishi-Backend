@@ -4124,3 +4124,9 @@ INFO 2024-01-11 16:18:42,771 autoreload 318845 140279266177024 Watching for file
 INFO 2024-01-11 16:18:46,649 autoreload 318845 140279266177024 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/help_about/views.py changed, reloading.
 INFO 2024-01-11 16:18:49,941 autoreload 318922 139892053430272 Watching for file changes with StatReloader
 INFO 2024-01-11 16:18:52,198 basehttp 318922 139887634269760 "GET /help/about_us/ HTTP/1.1" 200 2849
+INFO 2024-01-11 16:19:59,166 basehttp 318922 139887420372544 "GET /help/about_us/ HTTP/1.1" 200 2849
+INFO 2024-01-11 16:20:11,624 basehttp 318922 139887411979840 "GET /help/about_us/ HTTP/1.1" 200 2849
+INFO 2024-01-11 16:20:30,363 basehttp 318922 139887634269760 "GET //prediction/lateblight/all HTTP/1.1" 200 103116
+INFO 2024-01-11 16:20:30,449 basehttp 318922 139887403587136 "GET /prediction/lateblight/data?lat=37.4219983&long=-122.084 HTTP/1.1" 200 2611
+INFO 2024-01-11 16:20:33,356 basehttp 318922 139887403587136 "GET /help/about_us/ HTTP/1.1" 200 2849
+INFO 2024-01-11 16:20:47,414 basehttp 318922 139887395194432 "GET /help/get_help/ HTTP/1.1" 200 3028
