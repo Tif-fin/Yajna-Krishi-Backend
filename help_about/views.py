@@ -27,10 +27,10 @@ def about_us(request):
         {
             'name' : 'Yash Raj Pandeya',
             'role' : 'Project Manager',
-            'gmail' : 'www.gmail.com',
-            'linkedin' : 'www.linkedin.com',
-            'facebook' : 'www.facebook.com',
-            'github' : '',
+            'gmail' : 'https://www.gmail.com',
+            'linkedin' : 'https://www.linkedin.com',
+            'facebook' : 'https://www.facebook.com',
+            'github' : 'https://github.com',
 
             'image_url': '/static/Developers/Yash_Pandeya.jpg',
             'details': "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five",
