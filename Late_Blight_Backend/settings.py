@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'Auth',
     'Prediction',
+    'help_about'
 ]
 
 MIDDLEWARE = [
@@ -133,7 +134,7 @@ USE_L10N = TrueREST_FRAMEWORK = {
 USE_TZ = True
 
 
-STATIC_URL = 'static/model/'
+STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     # Specify the path to your app's static directory
     os.path.join(BASE_DIR, 'static'),
@@ -206,3 +207,8 @@ LOGGING = {
     },
 }
 
+import firebase_admin
+from firebase_admin import credentials
+
+cred = credentials.Certificate('static/Firebase/cred.json')
+firebase_admin.initialize_app(cred)
