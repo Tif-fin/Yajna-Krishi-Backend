@@ -1,5 +1,4 @@
 import numpy as np
-import torch
 from geopy.distance import geodesic
 from geopy.point import Point
 

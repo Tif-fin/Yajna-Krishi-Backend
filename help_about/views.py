@@ -30,6 +30,8 @@ def about_us(request):
             'gmail' : 'www.gmail.com',
             'linkedin' : 'www.linkedin.com',
             'facebook' : 'www.facebook.com',
+            'github' : '',
+
             'image_url': '/static/Developers/Yash_Pandeya.jpg',
             'details': "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five",
         },
@@ -46,12 +48,22 @@ def about_us(request):
         {
             'name' : 'Safal Shrestha',
             'role' : 'Full Stack Developer',
-            'gmail' : 'www.gmail.com',
+            'gmail' : 'dev.safalstha@gmail.com',
             'linkedin' : 'https://www.linkedin.com/in/itsmesafal/',
             'facebook' : 'https://www.facebook.com/sth1111a/',
-            'github' : 'dev.safalstha@gmail.com',
+            'github' : 'https://github.com/whoamisafal',
             'image_url': '/static/Developers/safal_shrestha.png',
             'details': "Hello! I am an Android full-stack developer and a passionate AI enthusiast currently pursuing my studies at Kathmandu University. With a keen interest in creating seamless mobile experiences, I specialize in building robust and user-friendly Android applications. My journey extends beyond mobile development, delving into the exciting realm of artificial intelligence. Through my academic pursuits, I am dedicated to merging the worlds of cutting-edge technology and practical development, constantly seeking opportunities to innovate and create impactful solutions.",
+        },
+               {
+            'name' : 'Nimesh Timalsina',
+            'role' : 'Designer',
+            'gmail' : 'nimeshtimalsina@gmail.com',
+            'linkedin' : 'https://www.linkedin.com/in/nimesh-timalsina-2495b8266/',
+            'facebook' : 'https://www.facebook.com/nimesh.timalsina.90',
+            'github' : 'https://github.com/GOGHSY',
+            'image_url': '/static/Developers/nimeshimage.jpg',
+            'details': "Designer with a passion for AI, blending creativity with technology to craft innovative and user-centric experiences. Excited about pushing the boundaries of design through the possibilities offered by artificial intelligence.",
         },
          
     ]

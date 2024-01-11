@@ -1,6 +1,3 @@
-import pandas as pd 
-import numpy as np
-
 import torch 
 from torch_geometric_temporal.nn.attention.stgcn import STConv
 
