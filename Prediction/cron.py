@@ -26,12 +26,11 @@ def PrepareProbabilities():
     weights_path = 'static/Model_Adam_FT_Last.pth'
     edge_index_path = 'static/Graph/edge_index.pt'
     edge_weight_path = 'static/Graph/edge_weights.pt'
-    test_data_path = 'static/Test_Data/test_data.csv'
     lags = 43
     pred_seq = 7
 
     stations = get_stations(stations_path)
-    df, Mu_Rho = features_dataframe(test_data_path, stations)
+    df, Mu_Rho = features_dataframe(process_locations_and_return_csv(locations_path), stations)
 
     snapshot = get_features(df, stations)
     snapshot = np.array(snapshot)

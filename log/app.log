@@ -4404,3 +4404,10 @@ INFO 2024-01-12 16:21:40,561 basehttp 371000 139714300454464 "GET //static/Devel
 INFO 2024-01-12 16:21:50,889 autoreload 371000 139718832521216 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/help_about/views.py changed, reloading.
 INFO 2024-01-12 16:21:54,045 autoreload 371165 140559323869184 Watching for file changes with StatReloader
 INFO 2024-01-12 16:21:58,955 basehttp 371165 140554904487488 "GET /help/about_us/ HTTP/1.1" 200 4783
+INFO 2024-01-12 16:23:16,652 basehttp 371165 140554893997632 "GET /help/about_us/ HTTP/1.1" 200 4783
+INFO 2024-01-12 16:27:37,564 basehttp 371165 140554893997632 "GET //prediction/lateblight/all HTTP/1.1" 200 195480
+INFO 2024-01-12 16:27:37,630 basehttp 371165 140554904487488 "GET /prediction/lateblight/data?lat=27.6466097&long=85.6264091 HTTP/1.1" 200 3172
+INFO 2024-01-12 16:33:52,115 autoreload 371165 140559323869184 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Prediction/views.py changed, reloading.
+INFO 2024-01-12 16:33:55,364 autoreload 372812 140002932408320 Watching for file changes with StatReloader
+INFO 2024-01-12 16:43:34,004 autoreload 372812 140002932408320 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Prediction/cron.py changed, reloading.
+INFO 2024-01-12 16:43:37,284 autoreload 373111 140638965022720 Watching for file changes with StatReloader

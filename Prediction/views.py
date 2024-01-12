@@ -24,7 +24,6 @@ def Prediction(request):
             
             nearest_places = df_locations.nsmallest(5, 'Distance')['Location'].tolist()
             
-            print(nearest_places)
             data_near_place = []
             for place in nearest_places:
                 
