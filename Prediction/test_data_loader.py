@@ -25,9 +25,9 @@ class WeatherDatasetLoader(object):
         # self.features = [np.expand_dims(stacked_target[0: self.lags, :, :], axis=0),]
         self.features = [np.expand_dims(stacked_target[-self.lags:], axis=0),]
 
-        self.targets = [np.zeros((1, self._pred_seq, 210, 3)),]
+        self.targets = [np.zeros((1, self._pred_seq, 320, 3)),]
 
-    def get_dataset(self, lags: int = 29, pred_seq=7) -> StaticGraphTemporalSignal:
+    def get_dataset(self, lags: int = 43, pred_seq=7) -> StaticGraphTemporalSignal:
         self.lags = lags
         self._pred_seq = pred_seq
         self._get_edge_index()

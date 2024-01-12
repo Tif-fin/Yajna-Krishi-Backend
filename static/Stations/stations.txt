@@ -2,7 +2,6 @@ laxmanpur
 Bejapur
 Khakhusm
 Fattepur
-Nirauli
 Chakiya
 Nepalgunj
 Goltakuri
@@ -38,26 +37,37 @@ Majhkanda
 Bheriganga
 Jahelre Bazar
 Kotmala
+Raghunagar
+Narayanpur
 Meulapur
 Dhajari Pipal
+Tikapur
 Jimala
+Bhajani Trishakti
 Gola
 Sattekada
 Bheripur
 Satakhani
+Chandarichauki
+Pawera
 Dhakadam
 Guptipur
 Subhakuna
 Shree Rastriya Mavi
+Hasulia
 Uttarganga
 Katkuwa
 Ratu
+Bonia
 Hariharpur
-Surkhet Airport
+Surkhet AIrport 
 Bame
 Kalagaun
 Parasan
+Najota
 Birendranagar-13
+Phulwari
+Pahalmanpur
 Chhiwang
 Teduha
 Laxmipur
@@ -86,6 +96,7 @@ Dhangadhi
 Gurashe Bazar
 Bhakunda Ground
 Badhara
+Urma
 Kunathari
 Boradadi
 Awal Parajul
@@ -99,6 +110,8 @@ Dhangadhi Airport
 BelaDevipur
 Pokharikanda
 Beldandi
+sugarkhal
+Attaria
 Bhairabstan
 Malika
 Pajaru
@@ -106,6 +119,7 @@ Bacchuwa
 Lalmali temple
 Rahaph
 Room
+Malakheti
 Rajalake
 Lahai
 Dodhara
@@ -127,6 +141,7 @@ Dodhara Chadani
 Shantitol
 Florida Hostel
 Daijee
+waterfall
 Dhungachaina
 Dailekh
 Odahari
@@ -137,10 +152,11 @@ Polkhari
 Nigali
 Daha
 Gadda Chauki
-Bhimdatta
+Bhimdatta 
 Suda
 Sahajpur
 Barachhen
+Dhanglagau
 Walant
 Lakhanora
 DObala
@@ -149,62 +165,156 @@ Bp Nagar
 barchain
 Kihunain
 Kusapani
+Mahabuidham
+Odanakhu
 Bhalulek
 Siddhartha Lake
 Bedkot Lake
+Kanchaur
 Odanaku
 Patal
 Lipna temple
-patal
+Patal II
 Chalsa
+Rakhyathala
 Narkhu
 Jhilmila tal
 Chhatiwan
 Laxmi nagar
+Mannakapadi
+Bharta
 Mugraha
+tamti
 Nayakwada
 Jogbudha
 Alital
 Budar
 Pipalkot
+Chihaya
 Dhirkamandau
 Mangalsen
+Dahaphatgau
 Saraswotinagar
 Chapamandau
+Ranchuli
+Malikathanta
+Hanku
 Sirsa
 Mudhegaun
+Chapre
+Mahatgau
 Gankhet
 Thuwa
+Kumalgau
+Badalkot
+Pholmahadev
+Ghodemahadev
+Guthichaur
 Gogan
 Ladagada
 Ramaroshan
+Kalikot
+Mahabipatharkhola
+Lihi
+tatopani
 Dipayal
+Rupsa
+Sipkhana
+Garjhankot
 ganespur
+nanikot
+Thirpu
 Bagarkot
+Chandannath
+Jumla
 Amargadi
 Kalisthan
+Chatara
+Badki
+patarasi
 Jhikrana
 Babala
+Mumrakot
+narakot
+Chumchaur
+Kailashmandu
+Deura
+Gotre
+Patranara
 Udayadev
+Khin
 Mahakali
 Chapali
+Tokini
+Khaptad NP
+Gudukhati
+Budiganga
+Bumramadichaur
 Kaipal
-Gajari
+Dholagohe
+Siddapur
+Bajura
+Sapata
+Birat
+Badimalika
+Malikabota
+Gajari 
+Koiralkot
+pandusin
 patan
+Manakot
+Kotila
 GIregada
+Maulali
+Jugada
 Ramghat
+Sunkuda
 Rauleswor
 Sikharpur
+Pate Primary School
+Baddhu
 Baltari
 Maunali
+Kadel
+Hemantabada
+Amlish
+kolti
 Dasarathchanda
 Shah lek
 Durga Bhawani
 Hatraj
 Bijaypur
 Deulek
+Khiratadi
+Dahakot
 Shree Kedar
+Lekhgau
+Rugin
 Nwali
+Talkot
 Sharmauli
 Dilasaini
+Bichya
+Surma
+Pati
+Daulichaur
+Dhamena
+Dadakot
+Shankharpur
+Dethala
+Kando
+Ranishikar
+Seri
+Malikarjun
+Datu
+tapoban
+Dhuli
+Api
 Baluwa gadel School
+Eyarkot
+Sitaula
+Dharchula
+Brahmadev
+Sansera
+Pipalchairu
+Rapla

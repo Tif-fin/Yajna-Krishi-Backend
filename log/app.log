@@ -4130,3 +4130,277 @@ INFO 2024-01-11 16:20:30,363 basehttp 318922 139887634269760 "GET //prediction/l
 INFO 2024-01-11 16:20:30,449 basehttp 318922 139887403587136 "GET /prediction/lateblight/data?lat=37.4219983&long=-122.084 HTTP/1.1" 200 2611
 INFO 2024-01-11 16:20:33,356 basehttp 318922 139887403587136 "GET /help/about_us/ HTTP/1.1" 200 2849
 INFO 2024-01-11 16:20:47,414 basehttp 318922 139887395194432 "GET /help/get_help/ HTTP/1.1" 200 3028
+INFO 2024-01-11 16:21:21,955 basehttp 318922 139887386801728 "GET /help/about_us/ HTTP/1.1" 200 2849
+INFO 2024-01-11 16:24:28,127 autoreload 318922 139892053430272 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/help_about/views.py changed, reloading.
+INFO 2024-01-11 16:24:31,416 autoreload 319497 140365762048000 Watching for file changes with StatReloader
+INFO 2024-01-11 16:27:27,691 basehttp 319497 140361275012672 "POST /api/login/ HTTP/1.1" 200 31
+INFO 2024-01-11 16:28:29,527 basehttp 319497 140361264522816 "POST /api/register/ HTTP/1.1" 201 69
+INFO 2024-01-11 16:28:46,536 basehttp 319497 140361256130112 "POST /api/login/ HTTP/1.1" 200 52
+INFO 2024-01-11 16:29:03,310 basehttp 319497 140361275012672 "GET /prediction/lateblight/data?lat=27.6466014&long=85.6264154 HTTP/1.1" 200 2572
+INFO 2024-01-11 16:29:03,327 basehttp 319497 140361247737408 "GET //prediction/lateblight/all HTTP/1.1" 200 103116
+INFO 2024-01-11 16:29:11,648 basehttp 319497 140361239344704 "GET /api/user-info HTTP/1.1" 301 0
+INFO 2024-01-11 16:29:11,864 basehttp 319497 140361239344704 "GET /api/user-info/ HTTP/1.1" 200 67
+INFO 2024-01-11 16:29:27,718 basehttp 319497 140361230952000 "POST /api/login/ HTTP/1.1" 200 52
+INFO 2024-01-11 16:29:43,187 basehttp 319497 140361222559296 "GET //prediction/lateblight/all HTTP/1.1" 200 103116
+INFO 2024-01-11 16:29:43,299 basehttp 319497 140360672081472 "GET /prediction/lateblight/data?lat=27.6466057&long=85.6264167 HTTP/1.1" 200 2572
+INFO 2024-01-11 16:30:35,610 basehttp 319497 140361275012672 "GET /api/user-info HTTP/1.1" 301 0
+INFO 2024-01-11 16:30:36,024 basehttp 319497 140361275012672 "GET /api/user-info/ HTTP/1.1" 200 67
+INFO 2024-01-11 16:32:09,339 autoreload 319497 140365762048000 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/help_about/views.py changed, reloading.
+INFO 2024-01-11 16:32:12,504 autoreload 319964 140599368142848 Watching for file changes with StatReloader
+INFO 2024-01-11 16:33:10,185 autoreload 319964 140599368142848 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/help_about/views.py changed, reloading.
+INFO 2024-01-11 16:33:13,374 autoreload 320204 140216579784704 Watching for file changes with StatReloader
+INFO 2024-01-11 16:33:40,107 autoreload 320204 140216579784704 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/help_about/views.py changed, reloading.
+INFO 2024-01-11 16:33:43,414 autoreload 320389 139817085198336 Watching for file changes with StatReloader
+INFO 2024-01-11 16:34:03,893 autoreload 320389 139817085198336 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/help_about/views.py changed, reloading.
+INFO 2024-01-11 16:34:07,344 autoreload 320491 140326379388928 Watching for file changes with StatReloader
+INFO 2024-01-11 16:34:39,198 autoreload 320491 140326379388928 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/help_about/views.py changed, reloading.
+INFO 2024-01-11 16:34:42,556 autoreload 320603 139761931362304 Watching for file changes with StatReloader
+INFO 2024-01-11 16:34:59,132 basehttp 320603 139757512279616 "GET /api/user-info HTTP/1.1" 301 0
+INFO 2024-01-11 16:34:59,357 basehttp 320603 139757512279616 "GET /api/user-info/ HTTP/1.1" 200 67
+INFO 2024-01-11 16:37:30,424 basehttp 320603 139757512279616 "GET //prediction/lateblight/all HTTP/1.1" 200 103116
+INFO 2024-01-11 16:37:30,514 basehttp 320603 139757296285248 "GET /prediction/lateblight/data?lat=27.6466118&long=85.6264121 HTTP/1.1" 200 2572
+INFO 2024-01-11 16:43:19,092 basehttp 320603 139757512279616 "GET /admin/Auth/customuser/ HTTP/1.1" 200 11805
+INFO 2024-01-11 16:43:19,138 basehttp 320603 139757512279616 "GET /static/admin/css/base.css HTTP/1.1" 200 21207
+INFO 2024-01-11 16:43:19,141 basehttp 320603 139757287892544 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+INFO 2024-01-11 16:43:19,142 basehttp 320603 139757296285248 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+INFO 2024-01-11 16:43:19,144 basehttp 320603 139757279499840 "GET /static/admin/css/changelists.css HTTP/1.1" 200 6566
+INFO 2024-01-11 16:43:19,146 basehttp 320603 139757287892544 "GET /static/admin/css/responsive.css HTTP/1.1" 200 18533
+INFO 2024-01-11 16:43:19,149 basehttp 320603 139757271107136 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-11 16:43:19,150 basehttp 320603 139757279499840 "GET /static/admin/js/core.js HTTP/1.1" 200 5682
+INFO 2024-01-11 16:43:19,152 basehttp 320603 139757296285248 "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2024-01-11 16:43:19,154 basehttp 320603 139757271107136 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 8943
+INFO 2024-01-11 16:43:19,155 basehttp 320603 139757262714432 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 292458
+INFO 2024-01-11 16:43:19,157 basehttp 320603 139757262714432 "GET /static/admin/js/actions.js HTTP/1.1" 200 7872
+INFO 2024-01-11 16:43:19,180 basehttp 320603 139757512279616 "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO 2024-01-11 16:43:19,197 basehttp 320603 139757287892544 "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2024-01-11 16:43:19,198 basehttp 320603 139757279499840 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+INFO 2024-01-11 16:43:19,229 basehttp 320603 139757512279616 "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+INFO 2024-01-11 16:43:19,246 basehttp 320603 139757287892544 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2024-01-11 16:43:19,257 basehttp 320603 139757279499840 "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+INFO 2024-01-11 16:43:19,258 basehttp 320603 139757262714432 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2024-01-11 16:43:19,258 basehttp 320603 139757271107136 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO 2024-01-11 16:43:21,209 basehttp 320603 139757279499840 "GET /admin/Auth/customuser/12/change/ HTTP/1.1" 200 21006
+INFO 2024-01-11 16:43:21,234 basehttp 320603 139757279499840 "GET /static/admin/css/forms.css HTTP/1.1" 200 9047
+INFO 2024-01-11 16:43:21,236 basehttp 320603 139757271107136 "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+INFO 2024-01-11 16:43:21,236 basehttp 320603 139757262714432 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO 2024-01-11 16:43:21,237 basehttp 320603 139757512279616 "GET /static/admin/js/calendar.js HTTP/1.1" 200 8466
+INFO 2024-01-11 16:43:21,240 basehttp 320603 139757287892544 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-11 16:43:21,248 basehttp 320603 139757271107136 "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+INFO 2024-01-11 16:43:21,282 basehttp 320603 139757279499840 "GET /static/admin/css/widgets.css HTTP/1.1" 200 11900
+INFO 2024-01-11 16:43:21,390 basehttp 320603 139757271107136 "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+INFO 2024-01-11 16:43:21,390 basehttp 320603 139757279499840 "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+INFO 2024-01-11 16:58:55,164 basehttp 320603 139757254321728 "POST /api/register/ HTTP/1.1" 201 64
+INFO 2024-01-11 16:59:17,767 basehttp 320603 139757245929024 "POST /api/login/ HTTP/1.1" 200 52
+INFO 2024-01-11 16:59:24,794 basehttp 320603 139756759414336 "GET /prediction/lateblight/data?lat=27.646604&long=85.6264156 HTTP/1.1" 200 2571
+INFO 2024-01-11 16:59:24,865 basehttp 320603 139756751021632 "GET //prediction/lateblight/all HTTP/1.1" 200 103116
+INFO 2024-01-11 17:00:25,275 basehttp 320603 139757254321728 "GET /api/user-info HTTP/1.1" 301 0
+INFO 2024-01-11 17:00:25,581 basehttp 320603 139757254321728 "GET /api/user-info/ HTTP/1.1" 200 67
+INFO 2024-01-11 17:00:34,290 basehttp 320603 139756742628928 "GET /help/about_us/ HTTP/1.1" 200 3210
+INFO 2024-01-11 17:00:34,699 basehttp 320603 139756725843520 "GET //static/Developers/Yash_Pandeya.jpg HTTP/1.1" 200 74461
+INFO 2024-01-11 17:00:34,700 basehttp 320603 139756717450816 "GET //static/Developers/nimeshimage.jpg HTTP/1.1" 200 69048
+INFO 2024-01-11 17:00:34,701 basehttp 320603 139756734236224 "GET //static/Developers/safal_shrestha.png HTTP/1.1" 200 640979
+INFO 2024-01-11 17:00:34,702 basehttp 320603 139756709058112 "GET //static/Developers/prajwal_thapa.png HTTP/1.1" 200 619891
+INFO 2024-01-11 17:01:36,751 basehttp 320603 139756751021632 "GET /help/about_us/ HTTP/1.1" 200 3210
+INFO 2024-01-11 17:10:39,432 basehttp 320603 139756751021632 "POST /api/login/ HTTP/1.1" 200 52
+INFO 2024-01-11 17:10:43,906 basehttp 320603 139756734236224 "GET /prediction/lateblight/data?lat=27.6466106&long=85.6264159 HTTP/1.1" 200 2572
+INFO 2024-01-11 17:10:44,182 basehttp 320603 139756717450816 "GET //prediction/lateblight/all HTTP/1.1" 200 103116
+INFO 2024-01-11 17:10:49,295 basehttp 320603 139756725843520 "GET /help/about_us/ HTTP/1.1" 200 3210
+INFO 2024-01-11 17:10:49,819 basehttp 320603 139757254321728 "GET //static/Developers/Yash_Pandeya.jpg HTTP/1.1" 200 74461
+INFO 2024-01-11 17:10:49,820 basehttp 320603 139757245929024 "GET //static/Developers/prajwal_thapa.png HTTP/1.1" 200 619891
+INFO 2024-01-11 17:10:50,012 basehttp 320603 139756742628928 "GET //static/Developers/nimeshimage.jpg HTTP/1.1" 200 69048
+INFO 2024-01-11 17:10:50,217 basehttp 320603 139756759414336 "GET //static/Developers/safal_shrestha.png HTTP/1.1" 200 640979
+INFO 2024-01-11 17:13:36,411 basehttp 320603 139756759414336 "GET /help/get_help/ HTTP/1.1" 200 3028
+INFO 2024-01-11 17:33:40,756 basehttp 320603 139757245929024 "GET /prediction/lateblight/data?lat=27.6466131&long=85.6263936 HTTP/1.1" 200 2572
+INFO 2024-01-11 17:33:41,134 basehttp 320603 139756759414336 "GET //prediction/lateblight/all HTTP/1.1" 200 103116
+INFO 2024-01-11 18:27:06,434 basehttp 320603 139756759414336 "GET /prediction/lateblight/data?lat=27.64661&long=85.626414 HTTP/1.1" 200 2569
+INFO 2024-01-11 18:27:06,502 basehttp 320603 139757245929024 "GET //prediction/lateblight/all HTTP/1.1" 200 103116
+INFO 2024-01-11 18:27:08,787 basehttp 320603 139757245929024 "GET /help/about_us/ HTTP/1.1" 200 3210
+INFO 2024-01-11 18:27:09,094 basehttp 320603 139757254321728 "GET //static/Developers/Yash_Pandeya.jpg HTTP/1.1" 200 74461
+INFO 2024-01-11 18:27:09,143 basehttp 320603 139756751021632 "GET //static/Developers/nimeshimage.jpg HTTP/1.1" 200 69048
+INFO 2024-01-11 18:27:09,146 basehttp 320603 139756742628928 "GET //static/Developers/prajwal_thapa.png HTTP/1.1" 200 619891
+INFO 2024-01-11 18:27:09,146 basehttp 320603 139756734236224 "GET //static/Developers/safal_shrestha.png HTTP/1.1" 200 640979
+INFO 2024-01-11 18:29:38,081 basehttp 320603 139756734236224 "GET //prediction/lateblight/all HTTP/1.1" 200 103116
+INFO 2024-01-11 18:29:38,222 basehttp 320603 139756742628928 "GET /prediction/lateblight/data?lat=27.6466101&long=85.6264111 HTTP/1.1" 200 2572
+INFO 2024-01-12 00:03:27,873 basehttp 320603 139757287892544 "GET //prediction/lateblight/all HTTP/1.1" 200 2
+INFO 2024-01-12 00:03:27,877 basehttp 320603 139757271107136 "GET /prediction/lateblight/data?lat=27.6466099&long=85.6264094 HTTP/1.1" 200 2572
+INFO 2024-01-12 00:03:54,362 basehttp 320603 139757279499840 "GET /api/user-info HTTP/1.1" 301 0
+INFO 2024-01-12 00:03:54,959 basehttp 320603 139757279499840 "GET /api/user-info/ HTTP/1.1" 200 61
+INFO 2024-01-12 00:04:00,797 basehttp 320603 139757512279616 "GET /help/about_us/ HTTP/1.1" 200 3210
+2024-01-12 00:15:00,001 - Prediction.cron - INFO - Started preparing data
+INFO 2024-01-12 14:14:44,186 autoreload 343475 139637840846848 Watching for file changes with StatReloader
+INFO 2024-01-12 14:15:23,306 autoreload 343475 139637840846848 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Prediction/cron.py changed, reloading.
+INFO 2024-01-12 14:15:26,460 autoreload 343557 140603018297344 Watching for file changes with StatReloader
+INFO 2024-01-12 14:15:55,213 autoreload 343557 140603018297344 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Prediction/get_weathers.py changed, reloading.
+INFO 2024-01-12 14:15:58,489 autoreload 343641 140275050471424 Watching for file changes with StatReloader
+INFO 2024-01-12 14:19:44,850 autoreload 343641 140275050471424 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Prediction/get_weathers.py changed, reloading.
+INFO 2024-01-12 14:19:48,256 autoreload 343945 140162337284096 Watching for file changes with StatReloader
+INFO 2024-01-12 15:17:57,037 autoreload 360067 140395810230272 Watching for file changes with StatReloader
+INFO 2024-01-12 15:18:04,442 basehttp 360067 140391390856768 "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-01-12 15:18:04,469 basehttp 360067 140391390856768 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4181
+INFO 2024-01-12 15:18:04,566 basehttp 360067 140391390856768 "GET /static/admin/css/login.css HTTP/1.1" 200 958
+INFO 2024-01-12 15:18:08,062 basehttp 360067 140391390856768 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-01-12 15:18:08,083 basehttp 360067 140391390856768 "GET /admin/ HTTP/1.1" 200 7223
+INFO 2024-01-12 15:18:08,168 basehttp 360067 140391390856768 "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+INFO 2024-01-12 15:18:08,228 basehttp 360067 140391390856768 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2024-01-12 15:18:11,176 basehttp 360067 140391390856768 "GET /admin/Prediction/weatherprediction/ HTTP/1.1" 200 8404
+INFO 2024-01-12 15:18:11,230 basehttp 360067 140391390856768 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-12 15:18:11,232 basehttp 360067 140391370925632 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+INFO 2024-01-12 15:18:11,232 basehttp 360067 140391379318336 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 292458
+INFO 2024-01-12 15:20:17,273 basehttp 360067 140391370925632 "GET /admin/Auth/customuser/ HTTP/1.1" 200 9435
+INFO 2024-01-12 15:20:17,303 basehttp 360067 140391370925632 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-01-12 15:20:18,754 basehttp 360067 140391370925632 "GET /admin/authtoken/tokenproxy/ HTTP/1.1" 200 8276
+INFO 2024-01-12 15:42:40,502 autoreload 360067 140395810230272 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Prediction/test_data_loader.py changed, reloading.
+INFO 2024-01-12 15:42:43,824 autoreload 365348 139878062874624 Watching for file changes with StatReloader
+INFO 2024-01-12 15:43:22,916 autoreload 365348 139878062874624 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Prediction/test_data_loader.py changed, reloading.
+INFO 2024-01-12 15:43:26,080 autoreload 365449 140552677728256 Watching for file changes with StatReloader
+INFO 2024-01-12 15:43:47,620 autoreload 365449 140552677728256 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Prediction/cron.py changed, reloading.
+INFO 2024-01-12 15:43:50,809 autoreload 365548 139979005775872 Watching for file changes with StatReloader
+INFO 2024-01-12 15:44:54,688 autoreload 365548 139979005775872 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Prediction/cron.py changed, reloading.
+INFO 2024-01-12 15:44:58,166 autoreload 365662 139941480132608 Watching for file changes with StatReloader
+INFO 2024-01-12 15:47:15,216 basehttp 365662 139937061099072 "GET /admin/Prediction/weatherprediction/ HTTP/1.1" 200 37682
+INFO 2024-01-12 15:47:15,245 basehttp 365662 139937061099072 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+WARNING 2024-01-12 15:52:19,568 basehttp 365662 139937061099072 "GET //prediction/lateblight/all HTTP/1.1" 401 27
+WARNING 2024-01-12 15:52:19,570 basehttp 365662 139937049560640 "GET /prediction/lateblight/data?lat=27.6466128&long=85.6264052 HTTP/1.1" 401 27
+INFO 2024-01-12 15:52:35,621 basehttp 365662 139937041167936 "GET /help/about_us/ HTTP/1.1" 200 3210
+WARNING 2024-01-12 15:52:44,452 basehttp 365662 139937032775232 "GET //prediction/lateblight/all HTTP/1.1" 401 27
+WARNING 2024-01-12 15:52:44,461 basehttp 365662 139937024382528 "GET /prediction/lateblight/data?lat=27.6466114&long=85.6264106 HTTP/1.1" 401 27
+WARNING 2024-01-12 15:52:48,586 basehttp 365662 139936544060992 "GET //prediction/lateblight/all HTTP/1.1" 401 27
+WARNING 2024-01-12 15:52:48,587 basehttp 365662 139936535668288 "GET /prediction/lateblight/data?lat=27.6466078&long=85.6264066 HTTP/1.1" 401 27
+INFO 2024-01-12 15:52:57,872 basehttp 365662 139936527275584 "GET /help/about_us/ HTTP/1.1" 200 3210
+WARNING 2024-01-12 15:55:33,905 basehttp 365662 139936527275584 "GET /prediction/lateblight/data?lat=37.4219983&long=-122.084 HTTP/1.1" 401 27
+WARNING 2024-01-12 15:55:33,905 basehttp 365662 139936535668288 "GET //prediction/lateblight/all HTTP/1.1" 401 27
+INFO 2024-01-12 15:56:53,482 basehttp 365662 139936544060992 "POST /api/register/ HTTP/1.1" 201 63
+INFO 2024-01-12 15:57:23,604 basehttp 365662 139936535668288 "POST /api/login/ HTTP/1.1" 200 52
+INFO 2024-01-12 15:57:31,117 basehttp 365662 139936527275584 "GET //prediction/lateblight/all HTTP/1.1" 200 195480
+ERROR 2024-01-12 15:57:31,183 basehttp 365662 139937024382528 "GET /prediction/lateblight/data?lat=37.4219983&long=-122.084 HTTP/1.1" 500 125481
+ERROR 2024-01-12 15:57:55,521 basehttp 365662 139937049560640 "GET /prediction/lateblight/data?lat=37.4219983&long=-122.084 HTTP/1.1" 500 125481
+INFO 2024-01-12 15:57:55,554 basehttp 365662 139937041167936 "GET //prediction/lateblight/all HTTP/1.1" 200 195480
+WARNING 2024-01-12 15:57:56,773 basehttp 365662 139937032775232 "GET /prediction/lateblight/data?lat=27.6466085&long=85.6264109 HTTP/1.1" 401 27
+WARNING 2024-01-12 15:57:56,825 basehttp 365662 139936518882880 "GET //prediction/lateblight/all HTTP/1.1" 401 27
+ERROR 2024-01-12 15:58:59,406 basehttp 365662 139936535668288 "GET /prediction/lateblight/data?lat=37.4219983&long=-122.084 HTTP/1.1" 500 125481
+INFO 2024-01-12 15:59:14,365 basehttp 365662 139937024382528 "POST /api/login/ HTTP/1.1" 200 52
+ERROR 2024-01-12 15:59:17,009 basehttp 365662 139937024382528 "GET /prediction/lateblight/data?lat=27.6466079&long=85.6264077 HTTP/1.1" 500 125567
+INFO 2024-01-12 15:59:17,134 basehttp 365662 139936527275584 "GET //prediction/lateblight/all HTTP/1.1" 200 195480
+INFO 2024-01-12 15:59:53,257 autoreload 365662 139941480132608 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Prediction/views.py changed, reloading.
+INFO 2024-01-12 15:59:56,556 autoreload 367340 139873720856576 Watching for file changes with StatReloader
+ERROR 2024-01-12 16:00:24,064 basehttp 367340 139869233870400 "GET /prediction/lateblight/data?lat=28&long=80 HTTP/1.1" 500 125707
+INFO 2024-01-12 16:00:39,113 autoreload 367340 139873720856576 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Prediction/views.py changed, reloading.
+INFO 2024-01-12 16:00:42,370 autoreload 367750 140633125318656 Watching for file changes with StatReloader
+ERROR 2024-01-12 16:00:43,489 basehttp 367750 140628637775424 "GET /prediction/lateblight/data?lat=28&long=80 HTTP/1.1" 500 136186
+INFO 2024-01-12 16:00:58,693 autoreload 367750 140633125318656 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Prediction/views.py changed, reloading.
+INFO 2024-01-12 16:01:01,881 autoreload 367831 140563841376256 Watching for file changes with StatReloader
+ERROR 2024-01-12 16:01:02,965 basehttp 367831 140559424509504 "GET /prediction/lateblight/data?lat=28&long=80 HTTP/1.1" 500 136186
+INFO 2024-01-12 16:01:15,545 basehttp 367831 140559410873920 "POST /api/login/ HTTP/1.1" 200 52
+ERROR 2024-01-12 16:01:20,523 basehttp 367831 140559402481216 "GET /prediction/lateblight/data?lat=37.4219983&long=-122.084 HTTP/1.1" 500 136059
+INFO 2024-01-12 16:01:20,717 basehttp 367831 140559393039936 "GET /help/about_us/ HTTP/1.1" 200 3210
+ERROR 2024-01-12 16:02:27,611 basehttp 367831 140559045883456 "GET /prediction/lateblight/data?lat=27.6466127&long=85.6264068 HTTP/1.1" 500 136075
+INFO 2024-01-12 16:02:31,702 basehttp 367831 140559037490752 "GET /api/user-info HTTP/1.1" 301 0
+INFO 2024-01-12 16:02:32,520 basehttp 367831 140559037490752 "GET /api/user-info/ HTTP/1.1" 200 61
+INFO 2024-01-12 16:02:36,711 basehttp 367831 140559029098048 "GET /help/about_us/ HTTP/1.1" 200 3210
+ERROR 2024-01-12 16:03:01,874 basehttp 367831 140559402481216 "GET /prediction/lateblight/data?lat=27.6466075&long=85.6264099 HTTP/1.1" 500 136075
+INFO 2024-01-12 16:03:12,920 autoreload 367831 140563841376256 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Prediction/views.py changed, reloading.
+INFO 2024-01-12 16:03:16,414 autoreload 368147 139771937996800 Watching for file changes with StatReloader
+ERROR 2024-01-12 16:03:17,620 basehttp 368147 139767521039936 "GET /prediction/lateblight/data?lat=28&long=80 HTTP/1.1" 500 110040
+ERROR 2024-01-12 16:03:23,315 basehttp 368147 139767521039936 "GET /prediction/lateblight/data?lat=28&long=80 HTTP/1.1" 500 110040
+INFO 2024-01-12 16:03:33,746 autoreload 368147 139771937996800 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Prediction/views.py changed, reloading.
+INFO 2024-01-12 16:03:36,863 autoreload 368292 140406235586560 Watching for file changes with StatReloader
+ERROR 2024-01-12 16:03:37,913 basehttp 368292 140401742706240 "GET /prediction/lateblight/data?lat=28&long=80 HTTP/1.1" 500 110279
+INFO 2024-01-12 16:03:47,977 autoreload 368292 140406235586560 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Prediction/views.py changed, reloading.
+INFO 2024-01-12 16:03:51,125 autoreload 368370 140017610989568 Watching for file changes with StatReloader
+ERROR 2024-01-12 16:03:52,163 basehttp 368370 140013194204736 "GET /prediction/lateblight/data?lat=28&long=80 HTTP/1.1" 500 110289
+INFO 2024-01-12 16:04:14,673 autoreload 368370 140017610989568 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Prediction/views.py changed, reloading.
+INFO 2024-01-12 16:04:17,795 autoreload 368457 140637817458688 Watching for file changes with StatReloader
+ERROR 2024-01-12 16:04:19,002 basehttp 368457 140633332250176 "GET /prediction/lateblight/data?lat=28&long=80 HTTP/1.1" 500 110297
+INFO 2024-01-12 16:04:56,838 autoreload 368457 140637817458688 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Prediction/views.py changed, reloading.
+INFO 2024-01-12 16:04:59,940 autoreload 368562 140347714363392 Watching for file changes with StatReloader
+INFO 2024-01-12 16:05:03,819 autoreload 368562 140347714363392 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Prediction/views.py changed, reloading.
+INFO 2024-01-12 16:05:07,120 autoreload 368639 140102468268032 Watching for file changes with StatReloader
+ERROR 2024-01-12 16:05:11,325 basehttp 368639 140098049361472 "GET /prediction/lateblight/data?lat=28&long=80 HTTP/1.1" 500 136186
+INFO 2024-01-12 16:05:40,257 autoreload 368639 140102468268032 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Prediction/views.py changed, reloading.
+INFO 2024-01-12 16:05:43,476 autoreload 368740 140323935752192 Watching for file changes with StatReloader
+INFO 2024-01-12 16:05:44,888 basehttp 368740 140319519098432 "GET /prediction/lateblight/data?lat=28&long=80 HTTP/1.1" 200 3171
+INFO 2024-01-12 16:06:03,407 basehttp 368740 140319507560000 "GET /prediction/lateblight/all HTTP/1.1" 200 195480
+INFO 2024-01-12 16:06:11,521 basehttp 368740 140319498118720 "GET /prediction/lateblight/data?lat=37.4219983&long=-122.084 HTTP/1.1" 200 3194
+INFO 2024-01-12 16:06:11,618 basehttp 368740 140319489726016 "GET /prediction/lateblight/data?lat=37.4219983&long=-122.084 HTTP/1.1" 200 3194
+INFO 2024-01-12 16:06:40,741 basehttp 368740 140319481333312 "GET /help/about_us/ HTTP/1.1" 200 3210
+INFO 2024-01-12 16:09:44,229 autoreload 368740 140323935752192 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/help_about/views.py changed, reloading.
+INFO 2024-01-12 16:09:47,411 autoreload 369188 139755477889024 Watching for file changes with StatReloader
+INFO 2024-01-12 16:12:03,645 autoreload 369188 139755477889024 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/help_about/views.py changed, reloading.
+INFO 2024-01-12 16:12:06,811 autoreload 369329 139640511516672 Watching for file changes with StatReloader
+INFO 2024-01-12 16:12:16,899 autoreload 369329 139640511516672 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/help_about/views.py changed, reloading.
+INFO 2024-01-12 16:12:20,006 autoreload 369411 140296680747008 Watching for file changes with StatReloader
+INFO 2024-01-12 16:12:22,898 basehttp 369411 140292261365312 "GET /help/get_help/ HTTP/1.1" 200 3028
+INFO 2024-01-12 16:13:44,917 autoreload 369411 140296680747008 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/help_about/views.py changed, reloading.
+INFO 2024-01-12 16:13:47,967 autoreload 369620 140082488352768 Watching for file changes with StatReloader
+INFO 2024-01-12 16:14:05,291 autoreload 369620 140082488352768 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/help_about/views.py changed, reloading.
+INFO 2024-01-12 16:14:08,538 autoreload 369697 139813360029696 Watching for file changes with StatReloader
+INFO 2024-01-12 16:14:16,613 autoreload 369697 139813360029696 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/help_about/views.py changed, reloading.
+INFO 2024-01-12 16:14:19,755 autoreload 369774 140501972905984 Watching for file changes with StatReloader
+INFO 2024-01-12 16:14:23,658 autoreload 369774 140501972905984 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/help_about/views.py changed, reloading.
+INFO 2024-01-12 16:14:26,682 autoreload 369849 140358194683904 Watching for file changes with StatReloader
+INFO 2024-01-12 16:14:40,246 basehttp 369849 140353775687232 "GET /help/about_us/ HTTP/1.1" 200 3880
+WARNING 2024-01-12 16:14:40,934 basehttp 369849 140353558541888 "GET //static/Developers/KUmar_lama.jpg HTTP/1.1" 404 1979
+INFO 2024-01-12 16:14:40,938 basehttp 369849 140353550149184 "GET //static/Developers/roshan.jpg HTTP/1.1" 200 558946
+INFO 2024-01-12 16:15:37,964 basehttp 369849 140353558541888 "GET /help/about_us/ HTTP/1.1" 200 3880
+WARNING 2024-01-12 16:15:38,016 basehttp 369849 140353541756480 "GET //static/Developers/KUmar_lama.jpg HTTP/1.1" 404 1979
+INFO 2024-01-12 16:15:47,424 basehttp 369849 140353541756480 "GET /help/about_us/ HTTP/1.1" 200 3880
+WARNING 2024-01-12 16:15:47,434 basehttp 369849 140353533363776 "GET //static/Developers/KUmar_lama.jpg HTTP/1.1" 404 1979
+INFO 2024-01-12 16:15:47,595 basehttp 369849 140353533363776 "GET /help/about_us/ HTTP/1.1" 200 3880
+INFO 2024-01-12 16:15:59,796 autoreload 369849 140358194683904 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/help_about/views.py changed, reloading.
+INFO 2024-01-12 16:16:02,908 autoreload 370069 140559080865792 Watching for file changes with StatReloader
+INFO 2024-01-12 16:16:07,918 basehttp 370069 140554661877312 "GET /help/about_us/ HTTP/1.1" 200 4539
+WARNING 2024-01-12 16:16:07,977 basehttp 370069 140554653484608 "GET //static/Developers/KUmar_lama.jpg HTTP/1.1" 404 1979
+INFO 2024-01-12 16:16:18,240 basehttp 370069 140554642994752 "GET /help/about_us/ HTTP/1.1" 200 4539
+WARNING 2024-01-12 16:16:18,242 basehttp 370069 140554653484608 "GET //static/Developers/KUmar_lama.jpg HTTP/1.1" 404 1979
+INFO 2024-01-12 16:16:37,658 basehttp 370069 140554653484608 "GET /help/about_us/ HTTP/1.1" 200 4539
+WARNING 2024-01-12 16:16:37,670 basehttp 370069 140554634602048 "GET //static/Developers/KUmar_lama.jpg HTTP/1.1" 404 1979
+INFO 2024-01-12 16:16:42,771 basehttp 370069 140554634602048 "GET /help/about_us/ HTTP/1.1" 200 4539
+WARNING 2024-01-12 16:16:42,780 basehttp 370069 140554626209344 "GET //static/Developers/KUmar_lama.jpg HTTP/1.1" 404 1979
+INFO 2024-01-12 16:17:08,918 basehttp 370069 140554626209344 "GET /help/about_us/ HTTP/1.1" 200 4539
+WARNING 2024-01-12 16:17:08,966 basehttp 370069 140554146936384 "GET //static/Developers/KUmar_lama.jpg HTTP/1.1" 404 1979
+INFO 2024-01-12 16:17:18,421 basehttp 370069 140554146936384 "GET /help/about_us/ HTTP/1.1" 200 4539
+WARNING 2024-01-12 16:17:18,474 basehttp 370069 140554138543680 "GET //static/Developers/KUmar_lama.jpg HTTP/1.1" 404 1979
+INFO 2024-01-12 16:17:28,254 basehttp 370069 140554138543680 "GET /help/about_us/ HTTP/1.1" 200 4539
+WARNING 2024-01-12 16:17:28,273 basehttp 370069 140554130150976 "GET //static/Developers/KUmar_lama.jpg HTTP/1.1" 404 1979
+INFO 2024-01-12 16:17:28,494 basehttp 370069 140554130150976 "GET /help/about_us/ HTTP/1.1" 200 4539
+INFO 2024-01-12 16:17:33,077 basehttp 370069 140554121758272 "GET /help/about_us/ HTTP/1.1" 200 4539
+WARNING 2024-01-12 16:17:33,310 basehttp 370069 140554113365568 "GET //static/Developers/KUmar_lama.jpg HTTP/1.1" 404 1979
+INFO 2024-01-12 16:17:46,703 basehttp 370069 140554661877312 "GET /help/about_us/ HTTP/1.1" 200 4539
+WARNING 2024-01-12 16:17:46,969 basehttp 370069 140554113365568 "GET //static/Developers/KUmar_lama.jpg HTTP/1.1" 404 1979
+INFO 2024-01-12 16:17:47,273 basehttp 370069 140554113365568 "GET /help/about_us/ HTTP/1.1" 200 4539
+INFO 2024-01-12 16:17:55,913 basehttp 370069 140554642994752 "GET /help/about_us/ HTTP/1.1" 200 4539
+WARNING 2024-01-12 16:17:55,968 basehttp 370069 140554104972864 "GET //static/Developers/KUmar_lama.jpg HTTP/1.1" 404 1979
+INFO 2024-01-12 16:18:06,007 basehttp 370069 140554104972864 "GET /help/about_us/ HTTP/1.1" 200 4539
+WARNING 2024-01-12 16:18:06,061 basehttp 370069 140554096580160 "GET //static/Developers/KUmar_lama.jpg HTTP/1.1" 404 1979
+INFO 2024-01-12 16:18:43,253 autoreload 370069 140559080865792 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/help_about/views.py changed, reloading.
+INFO 2024-01-12 16:18:46,303 autoreload 370585 140112650936320 Watching for file changes with StatReloader
+INFO 2024-01-12 16:18:48,671 basehttp 370585 140108231591488 "GET /help/about_us/ HTTP/1.1" 200 5075
+WARNING 2024-01-12 16:18:48,755 basehttp 370585 140108223198784 "GET //static/Developers/KUmar_lama.jpg HTTP/1.1" 404 1979
+INFO 2024-01-12 16:18:49,076 basehttp 370585 140108223198784 "GET //static/Developers/Kumar_lama.jpg HTTP/1.1" 200 1690634
+INFO 2024-01-12 16:18:49,103 basehttp 370585 140108007208512 "GET //static/Developers/Harish_Pic.jpg HTTP/1.1" 200 889364
+INFO 2024-01-12 16:18:49,119 basehttp 370585 140107998815808 "GET //static/Developers/Rojina_Shakya.JPG HTTP/1.1" 200 31879
+INFO 2024-01-12 16:19:12,757 basehttp 370585 140107990423104 "GET /help/about_us/ HTTP/1.1" 200 5075
+INFO 2024-01-12 16:19:17,627 basehttp 370585 140107982030400 "GET /help/about_us/ HTTP/1.1" 200 5075
+INFO 2024-01-12 16:19:21,591 basehttp 370585 140107973637696 "GET /help/about_us/ HTTP/1.1" 200 5075
+INFO 2024-01-12 16:19:43,220 basehttp 370585 140107965244992 "GET /help/about_us/ HTTP/1.1" 200 5075
+INFO 2024-01-12 16:19:55,579 autoreload 370585 140112650936320 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/help_about/views.py changed, reloading.
+INFO 2024-01-12 16:19:58,739 autoreload 370794 139825001717760 Watching for file changes with StatReloader
+INFO 2024-01-12 16:20:01,452 basehttp 370794 139820512835136 "GET /help/about_us/ HTTP/1.1" 200 5623
+INFO 2024-01-12 16:21:01,161 basehttp 370794 139820504442432 "GET /prediction/lateblight/data?lat=27.6466116&long=85.6263858 HTTP/1.1" 200 3172
+INFO 2024-01-12 16:21:01,172 basehttp 370794 139820496049728 "GET //prediction/lateblight/all HTTP/1.1" 200 195480
+INFO 2024-01-12 16:21:03,930 basehttp 370794 139820496049728 "GET /help/about_us/ HTTP/1.1" 200 5623
+INFO 2024-01-12 16:21:04,439 basehttp 370794 139820486608448 "GET //static/Developers/Harish_Pic.jpg HTTP/1.1" 200 889364
+INFO 2024-01-12 16:21:04,597 basehttp 370794 139820461430336 "GET //static/Developers/Rojina_Shakya.JPG HTTP/1.1" 200 31879
+INFO 2024-01-12 16:21:04,600 basehttp 370794 139820478215744 "GET //static/Developers/roshan.jpg HTTP/1.1" 200 558946
+INFO 2024-01-12 16:21:04,601 basehttp 370794 139820469823040 "GET //static/Developers/Kumar_lama.jpg HTTP/1.1" 200 1690634
+INFO 2024-01-12 16:21:12,213 autoreload 370794 139825001717760 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/help_about/views.py changed, reloading.
+INFO 2024-01-12 16:21:15,656 autoreload 371000 139718832521216 Watching for file changes with StatReloader
+INFO 2024-01-12 16:21:18,662 basehttp 371000 139714345563712 "GET /help/about_us/ HTTP/1.1" 200 5333
+INFO 2024-01-12 16:21:19,158 basehttp 371000 139714337171008 "GET //static/Developers/baburam.jpg HTTP/1.1" 200 5195560
+INFO 2024-01-12 16:21:26,928 basehttp 371000 139714326681152 "GET /prediction/lateblight/data?lat=27.64661&long=85.6264166 HTTP/1.1" 200 3170
+INFO 2024-01-12 16:21:26,948 basehttp 371000 139714318288448 "GET //prediction/lateblight/all HTTP/1.1" 200 195480
+INFO 2024-01-12 16:21:39,966 basehttp 371000 139714308847168 "GET /help/about_us/ HTTP/1.1" 200 5333
+INFO 2024-01-12 16:21:40,561 basehttp 371000 139714300454464 "GET //static/Developers/baburam.jpg HTTP/1.1" 200 5195560
+INFO 2024-01-12 16:21:50,889 autoreload 371000 139718832521216 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/help_about/views.py changed, reloading.
+INFO 2024-01-12 16:21:54,045 autoreload 371165 140559323869184 Watching for file changes with StatReloader
+INFO 2024-01-12 16:21:58,955 basehttp 371165 140554904487488 "GET /help/about_us/ HTTP/1.1" 200 4783

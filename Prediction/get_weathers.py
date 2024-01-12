@@ -10,14 +10,14 @@ def get_three_days_back_date():
     formatted_date = three_days_back_date.strftime('%Y%m%d')
     return formatted_date
 
-def get_forty_four_days_back_date():
+def get_forty_seven_days_back_date():
     current_date = datetime.now()
-    forty_four_days_back_date = current_date - timedelta(days=44)
+    forty_four_days_back_date = current_date - timedelta(days=47)
     formatted_date = forty_four_days_back_date.strftime('%Y%m%d')
     return formatted_date
 
 def make_api_call(latitude, longitude, place_name):
-    url = f'https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M,PRECTOT,PS,QV2M,RH2M,T2MWET,T2M_MAX,T2M_MIN,T2M_RANGE,TS,WS10M,WS10M_MAX,WS10M_MIN,WS10M_RANGE,WS50M,WS50M_MAX,WS50M_MIN,WS50M_RANGE&community=SB&longitude={longitude}&latitude={latitude}&start={get_forty_four_days_back_date()}&end={get_three_days_back_date()}&format=CSV'
+    url = f'https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M,PRECTOT,PS,QV2M,RH2M,T2MWET,T2M_MAX,T2M_MIN,T2M_RANGE,TS,WS10M,WS10M_MAX,WS10M_MIN,WS10M_RANGE,WS50M,WS50M_MAX,WS50M_MIN,WS50M_RANGE&community=SB&longitude={longitude}&latitude={latitude}&start={get_forty_seven_days_back_date()}&end={get_three_days_back_date()}&format=CSV'
     response = requests.get(url)
 
     if response.status_code == 200:
@@ -65,7 +65,7 @@ def process_locations_and_return_csv(locations_file_path):
     prev_latitude = ""
 
     for index, row in df_locations.iterrows():
-        place = row['Locations']
+        place = row['Location']
         latitude = row['Latitude']
         longitude = row['Longitude']
 

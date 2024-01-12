@@ -4,6 +4,7 @@ from rest_framework.decorators import api_view
 from .utils import *
 from .models import WeatherPrediction
 from django.db.models import Max
+from django.shortcuts import get_object_or_404
 
 @api_view(['GET'])
 def Prediction(request):
@@ -21,12 +22,21 @@ def Prediction(request):
             min_distance_index = df_locations['Distance'].idxmin()
             location = df_locations.iloc[min_distance_index]
             
-            nearest_places = df_locations.nsmallest(5, 'Distance')['Locations'].tolist()
-
+            nearest_places = df_locations.nsmallest(5, 'Distance')['Location'].tolist()
+            
+            print(nearest_places)
             data_near_place = []
             for place in nearest_places:
-                data_for_near_place = WeatherPrediction.objects.filter(place_name=place).last()
+                
+                data_for_near_place = WeatherPrediction.objects.filter(place_name=place)
+                print(data_for_near_place.count())
+                if data_for_near_place.count() > 1:
+                    data_for_near_place = data_for_near_place[:-1]
+                else:
+                    data_for_near_place = get_object_or_404(WeatherPrediction, place_name=place)
+
                 data_near = {}
+
                 data_near['id'] = data_for_near_place.id
                 data_near['latitude'] = data_for_near_place.latitude
                 data_near['longitude'] = data_for_near_place.longitude
@@ -38,7 +48,7 @@ def Prediction(request):
                 data_near_place.append(data_near)
 
 
-            data_for_current_place = WeatherPrediction.objects.filter(place_name=location['Locations']).last()
+            data_for_current_place = WeatherPrediction.objects.filter(place_name=location['Location']).last()
             
             data = {}
             data['latitude'] = latitude
