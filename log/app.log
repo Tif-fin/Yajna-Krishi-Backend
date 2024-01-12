@@ -4411,3 +4411,5 @@ INFO 2024-01-12 16:33:52,115 autoreload 371165 140559323869184 /home/prazzwaltha
 INFO 2024-01-12 16:33:55,364 autoreload 372812 140002932408320 Watching for file changes with StatReloader
 INFO 2024-01-12 16:43:34,004 autoreload 372812 140002932408320 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Prediction/cron.py changed, reloading.
 INFO 2024-01-12 16:43:37,284 autoreload 373111 140638965022720 Watching for file changes with StatReloader
+INFO 2024-01-12 16:55:30,519 autoreload 373111 140638965022720 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Late_Blight_Backend/settings.py changed, reloading.
+INFO 2024-01-12 16:55:33,881 autoreload 374165 139772298440704 Watching for file changes with StatReloader
