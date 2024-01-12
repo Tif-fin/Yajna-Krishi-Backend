@@ -4413,3 +4413,16 @@ INFO 2024-01-12 16:43:34,004 autoreload 372812 140002932408320 /home/prazzwaltha
 INFO 2024-01-12 16:43:37,284 autoreload 373111 140638965022720 Watching for file changes with StatReloader
 INFO 2024-01-12 16:55:30,519 autoreload 373111 140638965022720 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Late_Blight_Backend/settings.py changed, reloading.
 INFO 2024-01-12 16:55:33,881 autoreload 374165 139772298440704 Watching for file changes with StatReloader
+INFO 2024-01-12 16:58:12,438 basehttp 374165 139767878993472 "GET /prediction/lateblight/data?lat=28&long=80 HTTP/1.1" 200 3171
+INFO 2024-01-12 17:11:09,997 autoreload 374165 139772298440704 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Late_Blight_Backend/settings.py changed, reloading.
+INFO 2024-01-12 17:11:13,147 autoreload 375545 140468358230016 Watching for file changes with StatReloader
+INFO 2024-01-12 17:11:19,103 autoreload 375545 140468358230016 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Late_Blight_Backend/settings.py changed, reloading.
+INFO 2024-01-12 17:11:22,349 autoreload 375618 140373824860160 Watching for file changes with StatReloader
+INFO 2024-01-12 17:12:41,821 autoreload 375618 140373824860160 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Late_Blight_Backend/settings.py changed, reloading.
+INFO 2024-01-12 17:12:44,977 autoreload 375727 140233785397248 Watching for file changes with StatReloader
+INFO 2024-01-12 17:12:51,922 autoreload 375727 140233785397248 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Late_Blight_Backend/settings.py changed, reloading.
+INFO 2024-01-12 17:12:55,045 autoreload 375800 140504767717376 Watching for file changes with StatReloader
+INFO 2024-01-12 17:12:58,924 autoreload 375800 140504767717376 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Late_Blight_Backend/settings.py changed, reloading.
+INFO 2024-01-12 17:13:02,010 autoreload 375872 140646993248256 Watching for file changes with StatReloader
+INFO 2024-01-12 17:13:06,916 autoreload 375872 140646993248256 /home/prazzwalthapa/Desktop/Late_blight/Backend/Late_Blight/Late_Blight_Backend/settings.py changed, reloading.
+INFO 2024-01-12 17:13:10,157 autoreload 375930 140603232051200 Watching for file changes with StatReloader
