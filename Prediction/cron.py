@@ -1,4 +1,4 @@
-import logging
+# import logging
 from Prediction.test_data_loader import * 
 from Prediction.model import *  
 import pandas as pd
@@ -12,14 +12,14 @@ from datetime import datetime
 
 
 def PrepareProbabilities():
-    logger = logging.getLogger(__name__)
-    handler = logging.FileHandler('log/app.log')  # Replace with your file path
-    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-    handler.setFormatter(formatter)
-    logger.addHandler(handler)
-    logger.setLevel(logging.INFO)
+    # logger = logging.getLogger(__name__)
+    # handler = logging.FileHandler('log/app.log')  # Replace with your file path
+    # formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    # handler.setFormatter(formatter)
+    # logger.addHandler(handler)
+    # logger.setLevel(logging.INFO)
 
-    logger.info("Started preparing data")
+    # logger.info("Started preparing data")
 
     stations_path = 'static/Stations/stations.txt'
     locations_path = "static/Locations/locations.csv"
@@ -99,11 +99,13 @@ def PrepareProbabilities():
                     print("Entry already exists.")
             except IntegrityError:
                 print("IntegrityError: Duplicate entry.")
-            logger.info("Data updated in the database")
+            # logger.info("Data updated in the database")
     except Exception as ex:
         # Handle any other exceptions
-        logger.error("Error while preparing the data:", ex) 
+        print(f'exception {ex}')
+        # logger.error("Error while preparing the data:", ex) 
     finally:
         current_time = datetime.utcnow().strftime('%H:%M')
-        logger.info(f"Schedular run at {current_time} UTC")
+        print("data updated")
+        # logger.info(f"Schedular run at {current_time} UTC")
 

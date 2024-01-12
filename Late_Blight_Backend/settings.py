@@ -146,71 +146,71 @@ STATICFILES_DIRS = [
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-import logging
-import os
+# import logging
+# import os
 
-# Define your log file paths
-LOG_DIR = os.path.join(BASE_DIR, 'log')
+# # Define your log file paths
+# LOG_DIR = os.path.join(BASE_DIR, 'log')
 
-if not os.path.exists(LOG_DIR):
-    os.makedirs(LOG_DIR)
+# if not os.path.exists(LOG_DIR):
+#     os.makedirs(LOG_DIR)
 
-APP_LOG_FILENAME = os.path.join(LOG_DIR, 'app.log')
-ERROR_LOG_FILENAME = os.path.join(LOG_DIR, 'error.log')
+# APP_LOG_FILENAME = os.path.join(LOG_DIR, 'app.log')
+# ERROR_LOG_FILENAME = os.path.join(LOG_DIR, 'error.log')
 
-# Logging configuration
-LOGGING = {
-    "version": 1,
-    "disable_existing_loggers": False,
-    "formatters": {
-        "verbose": {
-            "format": "{levelname} {asctime} {module} {process:d} {thread:d} {message}",
-            "style": "{",
-        },
-        "simple": {
-            "format": "{levelname} {message}",
-            "style": "{",
-        },
-    },
-    "handlers": {
-        "console": {
-            "level": "INFO",
-            "class": "logging.StreamHandler",
-            "formatter": "simple",
-        },
-        "file_app": {
-            "level": "INFO",
-            "class": "logging.FileHandler",
-            "filename": APP_LOG_FILENAME,
-            "formatter": "verbose",
-        },
-        "file_error": {
-            "level": "ERROR",
-            "class": "logging.FileHandler",
-            "filename": ERROR_LOG_FILENAME,
-            "formatter": "verbose",
-        },
-        "mail_admins": {
-            "level": "ERROR",
-            "class": "django.utils.log.AdminEmailHandler",
-        },
-    },
-    "loggers": {
-        "django": {
-            "handlers": ["console", "file_app"],
-            "propagate": True,
-        },
-        "django.request": {
-            "handlers": ["mail_admins", "file_error"],
-            "level": "ERROR",
-            "propagate": False,
-        },
-        "myproject.custom": {
-            "handlers": ["console", "mail_admins", "file_app", "file_error"],
-            "level": "INFO",
-        },
-    },
-}
+# # Logging configuration
+# LOGGING = {
+#     "version": 1,
+#     "disable_existing_loggers": False,
+#     "formatters": {
+#         "verbose": {
+#             "format": "{levelname} {asctime} {module} {process:d} {thread:d} {message}",
+#             "style": "{",
+#         },
+#         "simple": {
+#             "format": "{levelname} {message}",
+#             "style": "{",
+#         },
+#     },
+#     "handlers": {
+#         "console": {
+#             "level": "INFO",
+#             "class": "logging.StreamHandler",
+#             "formatter": "simple",
+#         },
+#         "file_app": {
+#             "level": "INFO",
+#             "class": "logging.FileHandler",
+#             "filename": APP_LOG_FILENAME,
+#             "formatter": "verbose",
+#         },
+#         "file_error": {
+#             "level": "ERROR",
+#             "class": "logging.FileHandler",
+#             "filename": ERROR_LOG_FILENAME,
+#             "formatter": "verbose",
+#         },
+#         "mail_admins": {
+#             "level": "ERROR",
+#             "class": "django.utils.log.AdminEmailHandler",
+#         },
+#     },
+#     "loggers": {
+#         "django": {
+#             "handlers": ["console", "file_app"],
+#             "propagate": True,
+#         },
+#         "django.request": {
+#             "handlers": ["mail_admins", "file_error"],
+#             "level": "ERROR",
+#             "propagate": False,
+#         },
+#         "myproject.custom": {
+#             "handlers": ["console", "mail_admins", "file_app", "file_error"],
+#             "level": "INFO",
+#         },
+#     },
+# }
 
 import firebase_admin
 from firebase_admin import credentials
