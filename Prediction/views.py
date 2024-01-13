@@ -27,12 +27,7 @@ def Prediction(request):
             data_near_place = []
             for place in nearest_places:
                 
-                data_for_near_place = WeatherPrediction.objects.filter(place_name=place)
-                print(data_for_near_place.count())
-                if data_for_near_place.count() > 1:
-                    data_for_near_place = data_for_near_place[:-1]
-                else:
-                    data_for_near_place = get_object_or_404(WeatherPrediction, place_name=place)
+                data_for_near_place = WeatherPrediction.objects.filter(place_name=place).last()
 
                 data_near = {}
 
