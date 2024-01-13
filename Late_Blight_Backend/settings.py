@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'Auth',
     'Prediction',
-    'help_about'
+    'help_about',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -59,6 +60,11 @@ MIDDLEWARE = [
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+]
+
+
+CORS_ALLOWED_ORIGINS = [
+    "http://202.166.219.106:8080",
 ]
 
 ROOT_URLCONF = 'Late_Blight_Backend.urls'
