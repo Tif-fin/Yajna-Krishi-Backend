@@ -64,7 +64,7 @@ def PredictionAll(request):
         try:
             current_date = datetime.now().date()
 
-            data_for_current_date = WeatherPrediction.objects.filter(prediction_date=current_date)
+            data_for_current_date = WeatherPrediction.objects.all()
 
             data = list(data_for_current_date.values())
 
