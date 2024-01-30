@@ -30,6 +30,9 @@ def indexFunction(precipitaion_vec, min_temperature, relative_humidity):
 
 def process_weather_data(data):
     data = np.array(data)
+    
+    data = np.clip(data, 0, None)
+
     min_temperature = data[:, 0]  
     relative_humidity = data[:, 1]  
     precipitation = data[:, 2] 
