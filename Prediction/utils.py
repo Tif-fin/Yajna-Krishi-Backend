@@ -37,7 +37,7 @@ def process_weather_data(data):
     relative_humidity = data[:, 1]  
     precipitation = data[:, 2] 
 
-    return round(indexFunction(precipitaion_vec = precipitation, min_temperature=min_temperature, relative_humidity=relative_humidity)/600, 2)
+    return round(abs(indexFunction(precipitaion_vec = precipitation[-5:], min_temperature=min_temperature[-5:], relative_humidity=relative_humidity[-5:])/600), 2)
 
 
 

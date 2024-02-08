@@ -16,65 +16,100 @@ class Command(BaseCommand):
     def handle(self, *args, **kwargs):
         stations_path = 'static/Stations/stations.txt'
         locations_path = "static/Locations/locations.csv"
-        weights_path = 'static/Model_Adam_FT_Last.pth'
+        weights_path = 'static/Model_43Lags_STConv_Last.pth'
         edge_index_path = 'static/Graph/edge_index.pt'
         edge_weight_path = 'static/Graph/edge_weights.pt'
+        mean_file_path = "static/MeanStd/mean.csv"
+        std_file_path = "static/MeanStd/std.csv"
+        # test_file_path = "static/Test_Data/test_data.csv"
         lags = 43
         pred_seq = 7
 
         def perform_inference():
             stations = get_stations(stations_path)
-            df, Mu_Rho = features_dataframe(process_locations_and_return_csv(locations_path), stations)
-        
+            df, mean_values, std_values = normalizeTestData(process_locations_and_return_csv(locations_path), mean_file_path, std_file_path)
+            # df, mean_values, std_values = normalizeTestData(test_file_path, mean_file_path, std_file_path)
+
+
             snapshot = get_features(df, stations)
             snapshot = np.array(snapshot)
             snap_transpose = np.transpose(snapshot, (1, 0, 2))
-        
-            edge_index = torch.load(edge_index_path)
+
+            lags_ = snap_transpose.shape[0]
+
+            if lags_ < lags:
+                error_message = (
+                    f"Error: Number of lags in test data ({lags_}) is less than "
+                    f"the number of lags in the input sequence ({lags}). "
+                    "Please make sure that the test data has enough lags to "
+                    "cover the input sequence lags. Terminating the program."
+                )
+                raise ValueError(error_message)
+
+
+            # print(f"snapshots: {snap_transpose.shape}")
+
+            edge_index = torch.load(edge_index_path)#.to(torch.float32)
             edge_weight = torch.load(edge_weight_path).to(torch.float32)
-        
-            loader = WeatherDatasetLoader(
-                snapshots=snap_transpose,
-                edge_index=edge_index,
-                edge_weight=edge_weight
-            )
+
+            loader = WeatherDatasetLoader(snapshots=snap_transpose, 
+                                            edge_index=edge_index,
+                                            edge_weight=edge_weight)
             test_dataset = loader.get_dataset(lags=lags, pred_seq=pred_seq)
-        
+
             torch.cuda.empty_cache()
-        
+
+            # Check if CUDA is available
             device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-        
+
+            # Move the model to the selected device
             model = STGCN().to(device)
+
+            # Load the model on CPU if CUDA is not available
             model.load_state_dict(torch.load(weights_path, map_location=torch.device('cpu')))
+
+            #####################
+            ## Evaluation mode on
+            #####################
             model.eval()
-        
+
+            # Load the data on CPU if CUDA is not available
             for data in test_dataset:
                 snapshot = data
-        
+
+            # Move the data to the selected device
             snapshot = snapshot.to(device)
             y_pred = model(snapshot.x, snapshot.edge_index, snapshot.edge_attr)
-        
-            station_dict = Mu_Rho
-        
-            df = pd.DataFrame()
-        
-            for station, series_obj in station_dict.items():
-                data_dict = {'Location': [station]}
-                data_dict.update(series_obj.to_dict())
-                df = df.append(pd.DataFrame(data_dict), ignore_index=True)
-        
-            mean = pd.read_csv("static/MeanStd/mean.csv")
-            std = pd.read_csv("static/MeanStd/std.csv")
-        
-            mean_tensor = torch.tensor(mean.iloc[:, 5:8].values, dtype=torch.float32)
-            std_tensor = torch.tensor(std.iloc[:, 5:8].values, dtype=torch.float32)
-        
+            #print(y_pred)
+
+            ################
+            ## de-normalize 
+            ################
+            target_feat = ['T2M_MIN', 'RH2M', 'PRECTOTCORR']
+            mean_tensor = torch.tensor(mean_values.iloc[:,[4,5,6]].values, dtype=torch.float32)
+            std_tensor = torch.tensor(std_values.iloc[:,[4,5,6]].values, dtype=torch.float32)
+
             y_pred_ = torch.squeeze(y_pred)
             mean_tensor_broadcasted = np.expand_dims(mean_tensor.detach().numpy(), axis=0)
             std_tensor_broadcasted = np.expand_dims(std_tensor.detach().numpy(), axis=0)
-        
-            y_pred_denormalized = (y_pred_.detach().numpy() * std_tensor_broadcasted) + mean_tensor_broadcasted
-                
+
+            y_pred_ = y_pred_.cpu().detach().numpy()
+
+            # De-normalize y_pred_
+            y_pred_denormalized = (y_pred_ * std_tensor_broadcasted) + mean_tensor_broadcasted
+
+            y_pred_ = torch.squeeze(y_pred)
+            # mean_tensor_broadcasted = np.expand_dims(mean_tensor.detach().numpy(), axis=0)
+            # std_tensor_broadcasted = np.expand_dims(std_tensor.detach().numpy(), axis=0)
+
+            y_pred_ = y_pred_.cpu().detach().numpy()
+
+            # De-normalize y_pred_
+            y_pred_denormalized = (y_pred_ * std_tensor_broadcasted) + mean_tensor_broadcasted
+    
+            mask = y_pred_denormalized[:, :, -1]<0
+            y_pred_denormalized[mask, -1] = 0
+
             df_locations = pd.read_csv(locations_path)
 
             try:

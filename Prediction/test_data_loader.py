@@ -66,6 +66,26 @@ def features_dataframe(file_path, stations):
     
     return df_new, MEAN_STD
 
+def normalizeTestData(test_file_path, mean_file_path, std_file_path):
+    df = pd.read_csv(test_file_path)
+    selected_features = ['T2M', 'T2MWET', 'TS', 'T2M_MAX', 'T2M_MIN', 'RH2M',
+                         'PRECTOTCORR', 'PS', 'WS10M', 'WS10M_MAX', 'WS10M_MIN', 'WS50M', 'WS50M_MAX',
+                         'WS50M_MIN']
+    data = df[selected_features]
+    
+    mean_values = pd.read_csv(mean_file_path)
+    std_values = pd.read_csv(std_file_path)
+
+    for index, row in data.iterrows():
+        # Normalize the row using the corresponding mean and standard deviation values
+        normalized_row = (row - mean_values.iloc[0]) / std_values.iloc[0]
+        # Update the row in df with the normalized values
+        data.loc[index] = normalized_row
+
+    # normalized_data = data #(data - mean_values) / std_values
+    df[selected_features] = data[selected_features]
+    return df, mean_values, std_values
+
 def get_features(df, stations):   
     target_features = ['T2M', 'T2MWET', 'TS', 'T2M_MAX', 'T2M_MIN', 'RH2M', 'PRECTOTCORR', 
                        'PS', 'WS10M', 'WS10M_MAX', 'WS10M_MIN', 'WS50M', 'WS50M_MAX', 'WS50M_MIN']

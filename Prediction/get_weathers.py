@@ -6,13 +6,13 @@ from io import StringIO
 
 def get_three_days_back_date():
     current_date = datetime.now()
-    three_days_back_date = current_date - timedelta(days=18)
+    three_days_back_date = current_date - timedelta(days=3)
     formatted_date = three_days_back_date.strftime('%Y%m%d')
     return formatted_date
 
 def get_forty_seven_days_back_date():
     current_date = datetime.now()
-    forty_four_days_back_date = current_date - timedelta(days=62)
+    forty_four_days_back_date = current_date - timedelta(days=47)
     formatted_date = forty_four_days_back_date.strftime('%Y%m%d')
     return formatted_date
 
