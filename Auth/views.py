@@ -63,6 +63,9 @@ def delete_user(request):
         form = UserDeletionForm()
     return render(request, 'html/deletion.html', {'form': form})
 
+def privacy_policy(request):
+    return render(request, 'html/privacy_policy.html')
+
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 @authentication_classes([TokenAuthentication])
