@@ -55,6 +55,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 STATICFILES_FINDERS = [
@@ -64,7 +65,7 @@ STATICFILES_FINDERS = [
 
 
 CORS_ALLOWED_ORIGINS = [
-    "http://202.166.219.106:8080",
+    "http://safalstha.com.np",
 ]
 
 ROOT_URLCONF = 'Late_Blight_Backend.urls'
