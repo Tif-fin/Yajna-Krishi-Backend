@@ -67,14 +67,6 @@ STATICFILES_FINDERS = [
 
 CORS_ORIGIN_ALLOW_ALL = True
 
-CORS_ALLOWED_ORIGINS = [
-    "http://safalstha.com.np",
-    "null",
-]
-
-CORS_ALLOW_HEADERS = default_headers + (
-    'Access-Control-Allow-Origin',
-)
 
 ROOT_URLCONF = 'Late_Blight_Backend.urls'
 
