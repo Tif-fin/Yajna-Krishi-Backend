@@ -28,3 +28,8 @@ class ResetPasswordSerializer(serializers.Serializer):
     mobile_number = serializers.CharField(max_length=10)
     reset_code = serializers.CharField(max_length=6)  
     new_password = serializers.CharField(max_length=128) 
+
+
+class UserDeletionSerializer(serializers.Serializer):
+    username = serializers.IntegerField()
+    password = serializers.CharField()
