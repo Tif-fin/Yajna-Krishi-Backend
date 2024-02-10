@@ -49,7 +49,7 @@ class UserDeletionAPIView(APIView):
     def delete(self, request):
         serializer = UserDeletionSerializer(data=request.data)
         if serializer.is_valid():
-            username = serializer.validated_data['username']
+            username = serializer.validated_data['mobilenumber']
             password = serializer.validated_data['password']
             user = authenticate(request, username=username, password=password)
             if user is not None:
