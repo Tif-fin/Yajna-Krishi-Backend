@@ -65,12 +65,10 @@ STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 ]
 
-CORS_ORIGIN_ALLOW_ALL = False
+CORS_ORIGIN_ALLOW_ALL = True
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:8000",
     "http://safalstha.com.np",
-    "http://127.0.0.1:8000",
     "null",
 ]
 
