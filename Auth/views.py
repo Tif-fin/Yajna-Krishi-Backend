@@ -47,6 +47,7 @@ class LoginAPIView(APIView):
 
 class UserDeletionAPIView(APIView):
     def delete(self, request):
+        print(request.data)
         serializer = UserDeletionSerializer(data=request.data)
         if serializer.is_valid():
             username = serializer.validated_data['mobilenumber']

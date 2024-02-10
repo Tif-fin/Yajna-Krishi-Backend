@@ -31,5 +31,5 @@ class ResetPasswordSerializer(serializers.Serializer):
 
 
 class UserDeletionSerializer(serializers.Serializer):
-    username = serializers.IntegerField()
+    mobilenumber = serializers.IntegerField()
     password = serializers.CharField()
