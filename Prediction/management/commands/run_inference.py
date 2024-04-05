@@ -87,6 +87,7 @@ class Command(BaseCommand):
                 # Move the data to the selected device
                 snapshot = snapshot.to(device)
                 y_pred = model(snapshot.x, snapshot.edge_index, snapshot.edge_attr)
+                #print(y_pred)
 
                 ################
                 ## de-normalize 
@@ -94,27 +95,23 @@ class Command(BaseCommand):
                 target_feat = ['T2M_MIN', 'RH2M', 'PRECTOTCORR']
                 mean_tensor = torch.tensor(mean_values.iloc[:,[4,5,6]].values, dtype=torch.float32)
                 std_tensor = torch.tensor(std_values.iloc[:,[4,5,6]].values, dtype=torch.float32)
-
-                y_pred_ = torch.squeeze(y_pred)
-
+                
+                print(y_pred.shape)
+                # y_pred_ = torch.squeeze(y_pred)
                 mean_tensor_broadcasted = np.expand_dims(mean_tensor.detach().numpy(), axis=0)
                 std_tensor_broadcasted = np.expand_dims(std_tensor.detach().numpy(), axis=0)
 
-                y_pred_ = y_pred_.cpu().detach().numpy()
+                y_pred_ = y_pred.cpu().detach().numpy()
 
                 # De-normalize y_pred_
                 y_pred_denormalized = (y_pred_ * std_tensor_broadcasted) + mean_tensor_broadcasted
-                
-                y_pred_ = torch.squeeze(y_pred)
 
-                y_pred_ = y_pred_.cpu().detach().numpy()
+                mask = y_pred_denormalized[:, :, -1]<0
+                y_pred_denormalized[mask, -1] = 0
 
-                y_pred_denormalized = (y_pred_ * std_tensor_broadcasted) + mean_tensor_broadcasted
-                
-                mask = y_pred[:, :, -1]<0
-                y_pred[mask, -1] = 0
-
+                print(y_pred.shape, mean_tensor_broadcasted.shape, std_tensor_broadcasted.shape)
                 df_locations = pd.read_csv(locations_path)
+
 
                 try:
                     for index, row in df_locations.iterrows():
