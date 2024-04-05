@@ -17,14 +17,14 @@ class Command(BaseCommand):
     def handle(self, *args, **kwargs):
         stations_path = 'static/Stations/stations.txt'
         locations_path = "static/Locations/locations.csv"
-        weights_path = 'static/Model_43Lags_STConv_Last.pth'
+        weights_path = 'static/Model_60Lags_STConv_Best_Feb18.pt'
         edge_index_path = 'static/Graph/edge_index.pt'
         edge_weight_path = 'static/Graph/edge_weights.pt'
         mean_file_path = "static/MeanStd/mean.csv"
         std_file_path = "static/MeanStd/std.csv"
-        # test_file_path = "static/Test_Data/test_data.csv"
+        test_file_path = "static/Test_Data/test_data.csv"
         lags = 43
-        pred_seq = 7
+        pred_seq = 24
 
         def perform_inference():
             latest_data = WeatherPrediction.objects.order_by('prediction_date').first()
@@ -35,9 +35,8 @@ class Command(BaseCommand):
 
             else:
                 stations = get_stations(stations_path)
-                df, mean_values, std_values = normalizeTestData(process_locations_and_return_csv(locations_path), mean_file_path, std_file_path)
-                # df, mean_values, std_values = normalizeTestData(test_file_path, mean_file_path, std_file_path)
-
+                # df, mean_values, std_values = normalizeTestData(process_locations_and_return_csv(locations_path), mean_file_path, std_file_path)
+                df, mean_values, std_values = normalizeTestData(test_file_path, mean_file_path, std_file_path)
 
                 snapshot = get_features(df, stations)
                 snapshot = np.array(snapshot)
@@ -71,7 +70,7 @@ class Command(BaseCommand):
                 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
                 # Move the model to the selected device
-                model = STGCN().to(device)
+                model = STGCN_Best_BRC().to(device)
 
                 # Load the model on CPU if CUDA is not available
                 model.load_state_dict(torch.load(weights_path, map_location=torch.device('cpu')))
@@ -88,7 +87,6 @@ class Command(BaseCommand):
                 # Move the data to the selected device
                 snapshot = snapshot.to(device)
                 y_pred = model(snapshot.x, snapshot.edge_index, snapshot.edge_attr)
-                #print(y_pred)
 
                 ################
                 ## de-normalize 
@@ -98,6 +96,7 @@ class Command(BaseCommand):
                 std_tensor = torch.tensor(std_values.iloc[:,[4,5,6]].values, dtype=torch.float32)
 
                 y_pred_ = torch.squeeze(y_pred)
+
                 mean_tensor_broadcasted = np.expand_dims(mean_tensor.detach().numpy(), axis=0)
                 std_tensor_broadcasted = np.expand_dims(std_tensor.detach().numpy(), axis=0)
 
@@ -105,9 +104,15 @@ class Command(BaseCommand):
 
                 # De-normalize y_pred_
                 y_pred_denormalized = (y_pred_ * std_tensor_broadcasted) + mean_tensor_broadcasted
+                
+                y_pred_ = torch.squeeze(y_pred)
 
-                mask = y_pred_denormalized[:, :, -1]<0
-                y_pred_denormalized[mask, -1] = 0
+                y_pred_ = y_pred_.cpu().detach().numpy()
+
+                y_pred_denormalized = (y_pred_ * std_tensor_broadcasted) + mean_tensor_broadcasted
+                
+                mask = y_pred[:, :, -1]<0
+                y_pred[mask, -1] = 0
 
                 df_locations = pd.read_csv(locations_path)
 
@@ -117,8 +122,8 @@ class Command(BaseCommand):
                             longitude=row['Longitude'],
                             latitude=row['Latitude'],
                             place_name = row['Location'],
-                            predicted_weather=y_pred_denormalized[:, index].tolist(),
-                            lateblight_probability=process_weather_data(y_pred_denormalized[:, index].tolist())
+                            predicted_weather=y_pred[:, index].tolist(),
+                            lateblight_probability=process_weather_data(y_pred[:, index].tolist())
                         )
                 except ZeroDivisionError as e:
                     print("Error:", e)  

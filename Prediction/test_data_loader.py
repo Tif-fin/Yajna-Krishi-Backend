@@ -86,26 +86,29 @@ def normalizeTestData(test_file_path, mean_file_path, std_file_path):
     df[selected_features] = data[selected_features]
     return df, mean_values, std_values
 
-def get_features(df, stations):   
-    target_features = ['T2M', 'T2MWET', 'TS', 'T2M_MAX', 'T2M_MIN', 'RH2M', 'PRECTOTCORR', 
-                       'PS', 'WS10M', 'WS10M_MAX', 'WS10M_MIN', 'WS50M', 'WS50M_MAX', 'WS50M_MIN']
+def get_features(df, stations):
+    # target_features = ['QV2M', 'RH2M', 'PRECTOTCORR', 'T2M', 'T2MWET', 'TS', 'PS', 'WS10M', 'WS50M']
     #                    0        1          2           3       4       5     6      7        8
-    # Our target labels: [4, 5, 6] -> ['T2M_MIN', 'RH2M', 'PRECTOTCORR']
-    
+    target_features = ['T2M', 'T2MWET', 'TS',
+       'T2M_RANGE', 'T2M_MAX', 'T2M_MIN', 'QV2M', 'RH2M', 'PRECTOTCORR', 'PS',
+       'WS10M', 'WS10M_MAX', 'WS10M_MIN', 'WS10M_RANGE', 'WS50M', 'WS50M_MAX',
+       'WS50M_MIN', 'WS50M_RANGE']
+    # Our target labels: [2, 4, 5, 7, 8, 9]
+
     STATIONS_SNAPSHOTS = []
-    
-    # the `pd.Categorical` function is used to convert the 'Location' column to a categorical type with a 
-    # custom order specified by the `custom_order` list. The `ordered=True` argument ensures that the custom 
+
+    # the `pd.Categorical` function is used to convert the 'Location' column to a categorical type with a
+    # custom order specified by the `custom_order` list. The `ordered=True` argument ensures that the custom
     # order is respected when performing operations like `groupby`.
     df['Location'] = pd.Categorical(df['Location'], categories=stations, ordered=True)
 
     grouped_df = df.groupby('Location')
-    
+
     for _, group in tqdm(grouped_df):
         # Append the features for each station to the list
         snapshot = group[target_features].values.tolist()
         STATIONS_SNAPSHOTS.append(snapshot)
-    
+
     return STATIONS_SNAPSHOTS
 
 def get_stations(filename):
