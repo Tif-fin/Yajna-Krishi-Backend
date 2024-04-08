@@ -24,7 +24,7 @@ class Command(BaseCommand):
         std_file_path = "static/MeanStd/std.csv"
         test_file_path = "static/Test_Data/test_data.csv"
         lags = 43
-        pred_seq = 24
+        pred_seq = 7
 
         def perform_inference():
             latest_data = WeatherPrediction.objects.order_by('prediction_date').first()
