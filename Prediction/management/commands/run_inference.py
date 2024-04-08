@@ -93,10 +93,9 @@ class Command(BaseCommand):
                 ## de-normalize 
                 ################
                 target_feat = ['T2M_MIN', 'RH2M', 'PRECTOTCORR']
-                mean_tensor = torch.tensor(mean_values.iloc[:,[4,5,6]].values, dtype=torch.float32)
-                std_tensor = torch.tensor(std_values.iloc[:,[4,5,6]].values, dtype=torch.float32)
+                mean_tensor = torch.tensor(mean_values.iloc[:,[0,1,2,3,4,5,6]].values, dtype=torch.float32)
+                std_tensor = torch.tensor(std_values.iloc[:,[0,1,2,3,4,5,6]].values, dtype=torch.float32)
                 
-                print(y_pred.shape)
                 # y_pred_ = torch.squeeze(y_pred)
                 mean_tensor_broadcasted = np.expand_dims(mean_tensor.detach().numpy(), axis=0)
                 std_tensor_broadcasted = np.expand_dims(std_tensor.detach().numpy(), axis=0)
@@ -107,7 +106,8 @@ class Command(BaseCommand):
                 y_pred_denormalized = (y_pred_ * std_tensor_broadcasted) + mean_tensor_broadcasted
 
                 mask = y_pred_denormalized[:, :, -1]<0
-                y_pred_denormalized[mask, -1] = 0
+                print(mask)
+                # y_pred_denormalized[mask, -1] = 0
 
                 print(y_pred.shape, mean_tensor_broadcasted.shape, std_tensor_broadcasted.shape)
                 df_locations = pd.read_csv(locations_path)
