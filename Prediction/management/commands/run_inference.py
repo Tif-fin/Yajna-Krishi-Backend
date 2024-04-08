@@ -107,9 +107,9 @@ class Command(BaseCommand):
 
                 mask = y_pred_denormalized[:, :, -1]<0
                 print(mask)
-                # y_pred_denormalized[mask, -1] = 0
+                y_pred_denormalized[mask, -1] = 0
 
-                print(y_pred.shape, mean_tensor_broadcasted.shape, std_tensor_broadcasted.shape)
+                print(y_pred_denormalized.shape, mean_tensor_broadcasted.shape, std_tensor_broadcasted.shape)
                 df_locations = pd.read_csv(locations_path)
 
 
@@ -119,8 +119,8 @@ class Command(BaseCommand):
                             longitude=row['Longitude'],
                             latitude=row['Latitude'],
                             place_name = row['Location'],
-                            predicted_weather=y_pred[:, index].tolist(),
-                            lateblight_probability=process_weather_data(y_pred[:, index].tolist())
+                            predicted_weather=y_pred_denormalized[:, index].tolist(),
+                            lateblight_probability=process_weather_data(y_pred_denormalized[:, index].tolist())
                         )
                 except ZeroDivisionError as e:
                     print("Error:", e)  
