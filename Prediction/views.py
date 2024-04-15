@@ -13,7 +13,7 @@ def Prediction(request):
         longitude = request.GET.get('long')
 
         if latitude and longitude:
-            locations_path = "static/Locations/locations.csv"
+            locations_path = "static/Locations/muninipalities.csv"
             lat_ = [latitude, longitude]
 
             df_locations = pd.read_csv(locations_path)
@@ -22,7 +22,7 @@ def Prediction(request):
             min_distance_index = df_locations['Distance'].idxmin()
             location = df_locations.iloc[min_distance_index]
             
-            nearest_places = df_locations.nsmallest(5, 'Distance')['Location'].tolist()
+            nearest_places = df_locations.nsmallest(10, 'Distance')['Location'].tolist()
             
             data_near_place = []
             for place in nearest_places:
