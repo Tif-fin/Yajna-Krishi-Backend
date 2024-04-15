@@ -5,6 +5,7 @@ from .utils import *
 from .models import WeatherPrediction
 from django.db.models import Max
 from django.shortcuts import get_object_or_404
+from django.core.serializers import serialize
 
 @api_view(['GET'])
 def Prediction(request):
@@ -51,6 +52,7 @@ def Prediction(request):
             data['predicted_date'] = data_for_current_place.prediction_date
             data['near_places'] = data_near_place
             
+            data = serialize('json', data)
             return JsonResponse(data)
         else:
             return JsonResponse({'error': 'Latitude and longitude parameters are required'}, status=400)
@@ -67,6 +69,9 @@ def PredictionAll(request):
             data_for_current_date = WeatherPrediction.objects.filter(prediction_date=current_date)
 
             data = list(data_for_current_date.values())
+
+             # Serialize queryset to JSON
+            data = serialize('json', data_for_current_date)
 
             return JsonResponse(data, safe=False)
         except Exception as e:
