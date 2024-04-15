@@ -30,9 +30,8 @@ class Command(BaseCommand):
 
         def perform_inference():
             latest_data = WeatherPrediction.objects.order_by('prediction_date').first()
-            current_date = datetime.now().date()
 
-            if latest_data and latest_data.prediction_date == current_date:
+            if latest_data:
                 print("Latest data is already available")
 
             else:
