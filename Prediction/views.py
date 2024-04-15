@@ -13,16 +13,15 @@ def Prediction(request):
         longitude = request.GET.get('long')
 
         if latitude and longitude:
-            locations_path = "static/Locations/muninipalities.csv"
+            locations_path = "static/Locations/municipalities.csv"
             lat_ = [latitude, longitude]
 
             df_locations = pd.read_csv(locations_path)
-            df_locations['Distance'] = df_locations.apply(lambda row: geodesic_distance(*lat_, row['Latitude'], row['Longitude']), axis=1)
+            df_locations['Distance'] = df_locations.apply(lambda row: geodesic_distance(*lat_, row['latitude'], row['longitude']), axis=1)
         
             min_distance_index = df_locations['Distance'].idxmin()
             location = df_locations.iloc[min_distance_index]
-            
-            nearest_places = df_locations.nsmallest(10, 'Distance')['Location'].tolist()
+            nearest_places = df_locations.nsmallest(10, 'Distance')['Municipality'].tolist()
             
             data_near_place = []
             for place in nearest_places:
@@ -41,7 +40,7 @@ def Prediction(request):
 
                 data_near_place.append(data_near)
 
-            data_for_current_place = WeatherPrediction.objects.filter(place_name=location['Location']).last()
+            data_for_current_place = WeatherPrediction.objects.filter(place_name=location['Municipality']).last()
             
             data = {}
             data['latitude'] = latitude
