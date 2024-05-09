@@ -2,6 +2,16 @@ import numpy as np
 from geopy.distance import geodesic
 from geopy.point import Point
 
+def get_data(data):
+    data = np.array(data)
+    
+    data = np.clip(data, 0, None)
+
+    min_temperature = data[:, 3]  
+    relative_humidity = data[:, 1]  
+    precipitation = data[:, 2] 
+    
+    return min_temperature, relative_humidity, precipitation
 
 def indexFunction(precipitaion_vec, min_temperature, relative_humidity):
     # Initialize variables
@@ -27,13 +37,41 @@ def indexFunction(precipitaion_vec, min_temperature, relative_humidity):
     I_total = np.sum(I)
     return I_total
 
+def wart_disease_chance(data):
+    temperature,  humidity, precipitation = get_data(data=data)
+    disease_chance = []
+    if (12 <= np.mean(temperature) <= 24) and (np.sum(precipitation) > 700) and (np.mean(humidity) > 80):
+        chance = np.mean(temperature) + (np.sum(precipitation) - 700) / 10 + np.mean(humidity) / 2
+        # Normalize chance between 0 and 100
+        normalized_chance = (chance - 12) / (24 - 12) * 100
+        disease_chance.append(normalized_chance)
+    else:
+        disease_chance.append(0)  # If conditions not met, chance is 0
+
+    return round(abs(np.mean(disease_chance)),2)
+
+def bacterial_wilt_disease_chance(data):
+    disease_chance = []
+    
+    temperature,  humidity, precipitation = get_data(data=data)
+
+    if (30 <= np.mean(temperature) <= 35) and (np.mean(humidity) > 0):
+        chance = np.mean(temperature) + np.mean(humidity)
+        # Normalize chance between 0 and 100
+        normalized_chance = (chance - 30) / (35 - 30) * 100
+        disease_chance.append(normalized_chance)
+    else:
+        disease_chance.append(0)  # If conditions not met, chance is 0
+
+    return round(abs(np.mean(disease_chance)),2)
+
 
 def process_weather_data(data):
     data = np.array(data)
     
     data = np.clip(data, 0, None)
 
-    min_temperature = data[:, 0]  
+    min_temperature = data[:, 3]  
     relative_humidity = data[:, 1]  
     precipitation = data[:, 2] 
 
