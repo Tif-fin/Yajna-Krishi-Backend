@@ -1,10 +1,10 @@
 from django.http import JsonResponse
-from .get_weathers import *
 from rest_framework.decorators import api_view
-from .utils import *
 from .models import WeatherPrediction
-from django.db.models import Max
-from django.shortcuts import get_object_or_404
+from datetime import datetime
+from .get_weathers import *
+from .utils import *
+import pandas as pd
 
 @api_view(['GET'])
 def Prediction(request):
@@ -13,16 +13,15 @@ def Prediction(request):
         longitude = request.GET.get('long')
 
         if latitude and longitude:
-            locations_path = "static/Locations/locations.csv"
+            locations_path = "static/Locations/municipalities.csv"
             lat_ = [latitude, longitude]
 
             df_locations = pd.read_csv(locations_path)
-            df_locations['Distance'] = df_locations.apply(lambda row: geodesic_distance(*lat_, row['Latitude'], row['Longitude']), axis=1)
+            df_locations['Distance'] = df_locations.apply(lambda row: geodesic_distance(*lat_, row['latitude'], row['longitude']), axis=1)
         
             min_distance_index = df_locations['Distance'].idxmin()
             location = df_locations.iloc[min_distance_index]
-            
-            nearest_places = df_locations.nsmallest(5, 'Distance')['Location'].tolist()
+            nearest_places = df_locations.nsmallest(10, 'Distance')['Municipality'].tolist()
             
             data_near_place = []
             for place in nearest_places:
@@ -41,8 +40,7 @@ def Prediction(request):
 
                 data_near_place.append(data_near)
 
-
-            data_for_current_place = WeatherPrediction.objects.filter(place_name=location['Location']).last()
+            data_for_current_place = WeatherPrediction.objects.filter(place_name=location['Municipality']).last()
             
             data = {}
             data['latitude'] = latitude
@@ -66,10 +64,21 @@ def PredictionAll(request):
 
             data_for_current_date = WeatherPrediction.objects.filter(prediction_date=current_date)
 
-            data = list(data_for_current_date.values())
+            # Convert queryset to list of dictionaries
+            data = []
+            for obj in data_for_current_date:
+                data.append({
+                    'id': obj.id,
+                    'latitude': obj.latitude,
+                    'longitude': obj.longitude,
+                    'predicted_weather': obj.predicted_weather,
+                    'late_blight_probability': obj.lateblight_probability,
+                    'place_name': obj.place_name,
+                    'predicted_date': obj.prediction_date,
+                })
 
             return JsonResponse(data, safe=False)
         except Exception as e:
-            return JsonResponse({'error': Exception}, status=400)
+            return JsonResponse({'error': str(e)}, status=400)
     else:
         return JsonResponse({'error': 'Only GET requests are supported'}, status=405)

@@ -6,11 +6,13 @@ class WeatherPrediction(models.Model):
     latitude = models.DecimalField(max_digits=9, decimal_places=6)
     predicted_weather = models.JSONField()
     lateblight_probability = models.DecimalField(max_digits=5, decimal_places=2)
+    wart_probability = models.DecimalField(max_digits=5, decimal_places=2)
+    bacterial_wilt_probability = models.DecimalField(max_digits=5, decimal_places=2)
     place_name = models.CharField(max_length = 100)
     prediction_date = models.DateField(default=timezone.now)
 
     class meta:
-        unique_together = ['predicted_weather', 'late_blight_probability', 'predection_date']
+        unique_together = ['predicted_weather', 'late_blight_probability', 'prediction_date']
         
     def __str__(self):
         return f"Late Blight Prediction for {self.place_name} is  {self.lateblight_probability * 100}% on {self.prediction_date}"
