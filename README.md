@@ -41,8 +41,13 @@ To run this project locally, follow these steps:
 3. Make and Apply migrations:
 
     ```
-    python manage.py makemigrations
-    python manage.py migrate
+    python manage.py makemigrations Auth
+
+    python manage.py migrate Auth
+
+    python manage.py makemigrations Prediction
+
+    python manage.py migrate Prediction
     ```
 
 4. Create a superuser (optional):
@@ -85,4 +90,6 @@ Our project follows a typical Django project structure:
 
 ## License
 
-Kathmandu University ICIMOD joint project
+- Diwas Shrestha
+- Safal Shrestha
+- Nimesh Timalsina
