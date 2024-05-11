@@ -6,4 +6,5 @@ migrations/
 media/
 env/
 project
+staticfiles
 
