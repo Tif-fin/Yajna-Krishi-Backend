@@ -83,7 +83,7 @@ numpy==1.26.2;
 # torch-geometric-temporal==0.54.0
 # torch_geometric==2.4.0
 # tqdm==4.66.1
-triton==2.3.0
+# triton
 # typing_extensions==4.8.0
 # tzdata==2023.3
 # tzlocal==5.2
@@ -114,7 +114,7 @@ six==1.16.0;
 sqlparse==0.4.4;
 sympy==1.12;
 threadpoolctl==3.2.0;
-# torch-geometric-temporal==0.54.0;
+torch-geometric-temporal;
 torch_geometric==2.4.0;
 tqdm==4.66.1;
 typing_extensions==4.8.0;
@@ -124,6 +124,6 @@ uritemplate==4.1.1;
 urllib3==2.1.0;
 vine==5.1.0;
 wcwidth==0.2.13;
-https://huggingface.co/r4ziel/xformers_pre_built/resolve/main/triton-2.0.0-cp310-cp310-win_amd64.whl
+# https://huggingface.co/r4ziel/xformers_pre_built/resolve/main/triton-2.0.0-cp310-cp310-win_amd64.whl
 django-cors-headers
 

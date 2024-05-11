@@ -31,7 +31,10 @@ To run this project locally, follow these steps:
     (as there are some lib that depends in torch)
 
     ```
-    pip install torch 
+    pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+
+    pip install torch-scatter torch-sparse --no-index -f https://data.pyg.org/whl/torch-2.3.0+cu118.html
+
     pip install -r requirements.txt
     ```
 
