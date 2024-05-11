@@ -27,9 +27,7 @@ def Prediction(request):
             for place in nearest_places:
                 
                 data_for_near_place = WeatherPrediction.objects.filter(place_name=place).last()
-
                 data_near = {}
-
                 data_near['id'] = data_for_near_place.id
                 data_near['latitude'] = data_for_near_place.latitude
                 data_near['longitude'] = data_for_near_place.longitude

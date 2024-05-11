@@ -24,13 +24,12 @@ class Command(BaseCommand):
         edge_weight_path = 'static/Graph/edge_weights.pt'
         mean_file_path = "static/MeanStd/mean.csv"
         std_file_path = "static/MeanStd/std.csv"
-        test_file_path = "static/Test_Data/test_data.csv"
+        test_file_path = "static/Test_Data/test_data.csv" 
         lags = 43
         pred_seq = 24
 
         def perform_inference():
             latest_data = WeatherPrediction.objects.order_by('prediction_date').first()
-
             if latest_data:
                 print("Latest data is already available")
 
@@ -38,7 +37,6 @@ class Command(BaseCommand):
                 stations = get_stations(stations_path)
                 # df, mean_values, std_values = normalizeTestData(process_locations_and_return_csv(locations_path), mean_file_path, std_file_path)
                 df, mean_values, std_values = normalizeTestData(test_file_path, mean_file_path, std_file_path)
-
                 snapshot = get_features(df, stations)
                 snapshot = np.array(snapshot)
                 snap_transpose = np.transpose(snapshot, (1, 0, 2))
@@ -64,7 +62,7 @@ class Command(BaseCommand):
                                                 edge_index=edge_index,
                                                 edge_weight=edge_weight)
                 test_dataset = loader.get_dataset(lags=lags, pred_seq=pred_seq)
-
+                
                 torch.cuda.empty_cache()
 
                 # Check if CUDA is available
@@ -72,29 +70,28 @@ class Command(BaseCommand):
 
                 # Move the model to the selected device
                 model = STGCN_Best_BRC().to(device)
-
                 # Load the model on CPU if CUDA is not available
                 model.load_state_dict(torch.load(weights_path, map_location=torch.device('cpu')))
-
+               
                 #####################
                 ## Evaluation mode on
                 #####################
                 model.eval()
-
+                
                 # Load the data on CPU if CUDA is not available
                 for data in test_dataset:
                     snapshot = data
-
+                
                 # Move the data to the selected device
                 snapshot = snapshot.to(device)
                 y_pred = model(snapshot.x, snapshot.edge_index, snapshot.edge_attr)
-
                 print(len(y_pred[0][0][0]))
                 #print(y_pred)
-
+              
                 ################
                 ## de-normalize 
                 ################
+            
                 target_feat = ['T2M_MIN', 'RH2M', 'PRECTOTCORR']
                 mean_tensor = torch.tensor(mean_values.iloc[:,[0,1,2,3,4,5,6]].values, dtype=torch.float32)
                 std_tensor = torch.tensor(std_values.iloc[:,[0,1,2,3,4,5,6]].values, dtype=torch.float32)
@@ -134,5 +131,5 @@ class Command(BaseCommand):
                     print("An error occurred:", ex)  
                 finally:
                     print("Finally block executed")
-
+       
         perform_inference()
