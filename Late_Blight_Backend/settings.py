@@ -153,6 +153,7 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     # Specify the path to your app's static directory
     os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR,'lcc/Files')
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
