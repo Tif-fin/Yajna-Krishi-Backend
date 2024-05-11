@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'Auth',
     'Prediction',
     'help_about',
+    'lcc',
 ]
 
 MIDDLEWARE = [
@@ -69,6 +70,7 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 CSRF_TRUSTED_ORIGINS = [
     'https://safalstha.com.np',
+    'http://localhost:8000',
 ]
 
 ROOT_URLCONF = 'Late_Blight_Backend.urls'

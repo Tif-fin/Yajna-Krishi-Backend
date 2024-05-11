@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import numpy as np 
 import pandas as pd 
 import torch 
@@ -116,7 +115,7 @@ def get_stations(filename):
     with open(filename, 'r') as f:
         stations = [line.rstrip('\n') for line in f]
     return stations
-=======
+
 import numpy as np 
 import pandas as pd 
 import torch 
@@ -231,4 +230,3 @@ def get_stations(filename):
     with open(filename, 'r') as f:
         stations = [line.rstrip('\n') for line in f]
     return stations
->>>>>>> origin/main
