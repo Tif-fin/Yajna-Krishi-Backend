@@ -57,7 +57,6 @@ class Command(BaseCommand):
 
                 edge_index = torch.load(edge_index_path)#.to(torch.float32)
                 edge_weight = torch.load(edge_weight_path).to(torch.float32)
-
                 loader = WeatherDatasetLoader(snapshots=snap_transpose, 
                                                 edge_index=edge_index,
                                                 edge_weight=edge_weight)
