@@ -1,5 +1,3 @@
-import torch
-
 import torch 
 from torch_geometric_temporal.nn.attention.stgcn import STConv
 
@@ -24,7 +22,9 @@ class STGCN(torch.nn.Module):
         return temp
 
 model = STGCN()
-model.load_weight('weights.pth')
+# model.load_weight('weights.pth')
+weights = torch.load('weights.pth')
+model.load_state_dict(weights)
 
 model.predict()
 

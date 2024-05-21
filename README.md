@@ -61,6 +61,10 @@ To run this project locally, follow these steps:
     ```
     python manage.py runserver
     ```
+    To start crontabs
+    ```
+    python manage.py crontab add
+    ```
 
 6. Access the project at `http://localhost:8000` in your web browser.
 
