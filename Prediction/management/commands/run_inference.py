@@ -83,6 +83,19 @@ class Command(BaseCommand):
                 
                 # Move the data to the selected device
                 snapshot = snapshot.to(device)
+                
+                # ---------------------------------------------------------------------------------------------#
+                # ---------------------------------------------------------------------------------------------#
+                # Add additional channels if needed
+                if snapshot.x.shape[-1] < 18:
+                    additional_channels = torch.zeros(snapshot.x.shape[:-1] + (18 - snapshot.x.shape[-1],))
+                    snapshot.x = torch.cat((snapshot.x, additional_channels), dim=-1)
+                print(snapshot.x.shape)  # Check the shape of the input tensor
+                print(snapshot.edge_index.shape)
+                print(snapshot.edge_attr.shape)
+                # ---------------------------------------------------------------------------------------------#
+                # ---------------------------------------------------------------------------------------------#
+
                 y_pred = model(snapshot.x, snapshot.edge_index, snapshot.edge_attr)
                 print(len(y_pred[0][0][0]))
                 #print(y_pred)
