@@ -11,7 +11,6 @@ scheduled = True
 def start():
     global scheduled
     if not scheduled:
-
         scheduler.add_job(Command.handle, 'cron', hour=0, minute=15) #change the time later making it 00 in nepali time
         scheduler.start()
         scheduled = True

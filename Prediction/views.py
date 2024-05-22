@@ -5,6 +5,7 @@ from datetime import datetime
 from .get_weathers import *
 from .utils import *
 import pandas as pd
+from django.db.models import Count
 
 @api_view(['GET'])
 def Prediction(request):
@@ -62,6 +63,32 @@ def PredictionAll(request):
 
             data_for_current_date = WeatherPrediction.objects.filter(prediction_date=current_date)
 
+            # Convert queryset to list of dictionaries
+            data = []
+            for obj in data_for_current_date:
+                data.append({
+                    'id': obj.id,
+                    'latitude': obj.latitude,
+                    'longitude': obj.longitude,
+                    'predicted_weather': obj.predicted_weather,
+                    'late_blight_probability': obj.lateblight_probability,
+                    'place_name': obj.place_name,
+                    'predicted_date': obj.prediction_date,
+                })
+
+            return JsonResponse(data, safe=False)
+        except Exception as e:
+            return JsonResponse({'error': str(e)}, status=400)
+    else:
+        return JsonResponse({'error': 'Only GET requests are supported'}, status=405)
+
+# Prediction History
+@api_view(['GET'])
+def PredictionHistory(request):
+    if request.method == 'GET':
+        try:
+            current_date = datetime.now().date()
+            data_for_current_date = WeatherPrediction.objects.filter(prediction_date__lte=current_date)
             # Convert queryset to list of dictionaries
             data = []
             for obj in data_for_current_date:
