@@ -17,13 +17,13 @@ def lcc_001(request):
             max.sort()
             latest = max[-1]
             if version=='null':
-                return JsonResponse({'status':'latest model','url':'https://'+request.headers.get('Host')+'/lcc/download?filename='+latest,'hasUpdate':True})
+                return JsonResponse({'status':'latest model','url':'https://'+request.headers.get('X-Forwarded-Host')+'/lcc/download?filename='+latest,'hasUpdate':True})
             if latest == version:
-                return JsonResponse({'status': 'App is up to date', 'latest': latest,'hasUpdate':False})
+                return JsonResponse({'status': 'App is up to date', "url":None,'hasUpdate':False})
             elif version not in max:
                 return JsonResponse({'error': 'Invalid version'},status=400)
             elif latest != version:
-                return JsonResponse({'status': 'Update available', 'latest': latest, 'url':'https://'+request.headers.get('Host')+'/lcc/download?filename='+latest,'hasUpdate':True})
+                return JsonResponse({'status': 'Update available', 'url':'https://'+request.headers.get('X-Forwarded-Host')+'/lcc/download?filename='+latest,'hasUpdate':True})
         else:
             return JsonResponse({'error': 'Version parameter is required'}, status=400)
         
