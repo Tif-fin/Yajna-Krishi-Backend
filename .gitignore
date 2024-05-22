@@ -6,4 +6,9 @@ migrations/
 media/
 env/
 project
+<<<<<<< HEAD
 backend
+=======
+staticfiles
+
+>>>>>>> 3cca505ad1d3e28a44ff600c8ffc860c117e31a2

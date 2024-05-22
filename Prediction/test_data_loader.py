@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import numpy as np 
 import pandas as pd 
 import torch 
@@ -116,7 +115,7 @@ def get_stations(filename):
     with open(filename, 'r') as f:
         stations = [line.rstrip('\n') for line in f]
     return stations
-=======
+
 import numpy as np 
 import pandas as pd 
 import torch 
@@ -191,14 +190,13 @@ def normalizeTestData(test_file_path, mean_file_path, std_file_path):
                          'PRECTOTCORR', 'PS', 'WS10M', 'WS10M_MAX', 'WS10M_MIN', 'WS50M', 'WS50M_MAX',
                          'WS50M_MIN']
     data = df[selected_features]
-    
     mean_values = pd.read_csv(mean_file_path)
     std_values = pd.read_csv(std_file_path)
 
     for index, row in data.iterrows():
         # Normalize the row using the corresponding mean and standard deviation values
         normalized_row = (row - mean_values.iloc[0]) / std_values.iloc[0]
-        # Update the row in df with the normalized values
+        # # Update the row in df with the normalized values
         data.loc[index] = normalized_row
 
     # normalized_data = data #(data - mean_values) / std_values
@@ -231,4 +229,3 @@ def get_stations(filename):
     with open(filename, 'r') as f:
         stations = [line.rstrip('\n') for line in f]
     return stations
->>>>>>> origin/main

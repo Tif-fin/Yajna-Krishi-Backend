@@ -31,15 +31,23 @@ To run this project locally, follow these steps:
     (as there are some lib that depends in torch)
 
     ```
-    pip install torch 
+    pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+
+    pip install torch-scatter torch-sparse --no-index -f https://data.pyg.org/whl/torch-2.3.0+cu118.html
+
     pip install -r requirements.txt
     ```
 
 3. Make and Apply migrations:
 
     ```
-    python manage.py makemigrations
-    python manage.py migrate
+    python manage.py makemigrations Auth
+
+    python manage.py migrate Auth
+
+    python manage.py makemigrations Prediction
+
+    python manage.py migrate Prediction
     ```
 
 4. Create a superuser (optional):
@@ -52,6 +60,10 @@ To run this project locally, follow these steps:
 
     ```
     python manage.py runserver
+    ```
+    To start crontabs
+    ```
+    python manage.py crontab add
     ```
 
 6. Access the project at `http://localhost:8000` in your web browser.
@@ -82,4 +94,6 @@ Our project follows a typical Django project structure:
 
 ## License
 
-Kathmandu University ICIMOD joint project
+- Diwas Shrestha
+- Safal Shrestha
+- Nimesh Timalsina

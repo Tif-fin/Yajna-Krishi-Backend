@@ -23,5 +23,6 @@ urlpatterns = [
     path('api/', include('Auth.urls')),
     path('prediction/', include('Prediction.urls')),
     path('help/', include('help_about.urls')),
+    path('lcc/', include('lcc.urls')),
 
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
