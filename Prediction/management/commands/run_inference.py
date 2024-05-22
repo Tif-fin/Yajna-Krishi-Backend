@@ -9,7 +9,7 @@ import torch
 from Prediction.models import WeatherPrediction
 from Prediction.utils import *
 from Prediction.get_weathers import process_locations_and_return_csv
-from datetime import datetime
+from datetime import datetime,timedelta
 
 class Command(BaseCommand):
     help = 'Run inference'
@@ -29,10 +29,10 @@ class Command(BaseCommand):
         pred_seq = 24
 
         def perform_inference():
-            latest_data = WeatherPrediction.objects.order_by('prediction_date').first()
-            if latest_data:
+            current_date = datetime.today().date()
+            latest_data = WeatherPrediction.objects.filter(prediction_date=current_date)
+            if  latest_data:
                 print("Latest data is already available")
-
             else:
                 stations = get_stations(stations_path)
                 # df, mean_values, std_values = normalizeTestData(process_locations_and_return_csv(locations_path), mean_file_path, std_file_path)

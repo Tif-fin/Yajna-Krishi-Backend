@@ -23,8 +23,9 @@ class STGCN(torch.nn.Module):
 
 model = STGCN()
 # model.load_weight('weights.pth')
-weights = torch.load('weights.pth')
-model.load_state_dict(weights)
+weight = torch.load('static/Model_60Lags_STConv_Best_Feb18.pt')
+
+model.load_state_dict(weight)
 
 model.predict()
 
