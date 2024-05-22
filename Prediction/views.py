@@ -88,7 +88,11 @@ def PredictionHistory(request):
     if request.method == 'GET':
         try:
             current_date = datetime.now().date()
-            data_for_current_date = WeatherPrediction.objects.filter(prediction_date__lte=current_date)
+            # Calculate the date 15 days ago
+            fifteen_days_ago = current_date - timedelta(days=15)
+
+            # Query the database for data within the last 15 days
+            data_for_current_date = WeatherPrediction.objects.filter(prediction_date__gte=fifteen_days_ago, prediction_date__lte=current_date)
             # Convert queryset to list of dictionaries
             data = []
             for obj in data_for_current_date:
