@@ -10,6 +10,8 @@ from Prediction.get_weathers import process_locations_and_return_csv
 from django.db import IntegrityError
 from datetime import datetime
 
+from Prediction.weather_model import STGCN
+
 
 def PrepareProbabilities():
     # logger = logging.getLogger(__name__)
