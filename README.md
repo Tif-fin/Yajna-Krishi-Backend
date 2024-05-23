@@ -33,37 +33,39 @@ To run this project locally, follow these steps:
     ```
     pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 
-    pip install torch-scatter torch-sparse --no-index -f https://data.pyg.org/whl/torch-2.3.0+cu118.html
+    pip3 install torch-scatter torch-sparse --no-index -f https://data.pyg.org/whl/torch-2.3.0+cu118.html
 
-    pip install -r requirements.txt
+    pip3 install -r requirements.txt
     ```
 
 3. Make and Apply migrations:
 
     ```
-    python manage.py makemigrations Auth
+    python3 manage.py makemigrations Auth
 
-    python manage.py migrate Auth
+    python3 manage.py migrate Auth
 
-    python manage.py makemigrations Prediction
+    python3 manage.py makemigrations Prediction
 
-    python manage.py migrate Prediction
+    python3 manage.py migrate Prediction
+
+    python3 manage.py migrate
     ```
 
 4. Create a superuser (optional):
 
     ```
-    python manage.py createsuperuser
+    python3 manage.py createsuperuser
     ```
 
 5. Start the development server:
 
     ```
-    python manage.py runserver
+    python3 manage.py runserver
     ```
     To start crontabs
     ```
-    python manage.py crontab add
+    python3 manage.py crontab add
     ```
 
 6. Access the project at `http://localhost:8000` in your web browser.

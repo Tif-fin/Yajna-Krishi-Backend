@@ -157,6 +157,10 @@ STATICFILES_DIRS = [
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+CRONJOBS = [
+    ('0 0 * * *', 'django.core.management.call_command', ['run_inference']),
+]
+
 # import logging
 # import os
 
