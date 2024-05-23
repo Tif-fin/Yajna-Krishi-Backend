@@ -86,23 +86,22 @@ def PredictionAll(request):
 @api_view(['GET'])
 def PredictionHistory(request):
     if request.method == 'GET':
+        placename = request.GET.get("place_name")
+        if not placename:
+            return JsonResponse({'error':'Place name is required field','status':400})
         try:
             current_date = datetime.now().date()
             # Calculate the date 15 days ago
             fifteen_days_ago = current_date - timedelta(days=15)
 
             # Query the database for data within the last 15 days
-            data_for_current_date = WeatherPrediction.objects.filter(prediction_date__gte=fifteen_days_ago, prediction_date__lte=current_date)
+            data_for_current_date = WeatherPrediction.objects.filter(place_name=placename,prediction_date__gte=fifteen_days_ago, prediction_date__lte=current_date)
             # Convert queryset to list of dictionaries
             data = []
             for obj in data_for_current_date:
                 data.append({
-                    'id': obj.id,
-                    'latitude': obj.latitude,
-                    'longitude': obj.longitude,
                     'predicted_weather': obj.predicted_weather,
                     'late_blight_probability': obj.lateblight_probability,
-                    'place_name': obj.place_name,
                     'predicted_date': obj.prediction_date,
                 })
 
