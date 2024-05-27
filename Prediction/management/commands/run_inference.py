@@ -16,8 +16,8 @@ class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
         stations_path = 'static/Stations/stations.txt'
-        # locations_path = "static/Locations/locations.csv"
-        locations_path = "static/Locations/municipalities.csv"
+        locations_path = "static/Locations/locations.csv"
+        # locations_path = "static/Locations/municipalities.csv"
 
         weights_path = 'static/Model_60Lags_STConv_Best_Feb18.pt'
         edge_index_path = 'static/Graph/edge_index.pt'
@@ -35,8 +35,8 @@ class Command(BaseCommand):
                 print("Latest data is already available")
             else:
                 stations = get_stations(stations_path)
-                # df, mean_values, std_values = normalizeTestData(process_locations_and_return_csv(locations_path), mean_file_path, std_file_path)
-                df, mean_values, std_values = normalizeTestData(test_file_path, mean_file_path, std_file_path)
+                df, mean_values, std_values = normalizeTestData(process_locations_and_return_csv(locations_path), mean_file_path, std_file_path)
+                # df, mean_values, std_values = normalizeTestData(test_file_path, mean_file_path, std_file_path)
                 snapshot = get_features(df, stations)
                 snapshot = np.array(snapshot)
                 snap_transpose = np.transpose(snapshot, (1, 0, 2))
