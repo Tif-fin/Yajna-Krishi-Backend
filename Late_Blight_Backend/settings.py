@@ -69,6 +69,7 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 CSRF_TRUSTED_ORIGINS = [
     'https://safalstha.com.np',
+'https://yajna.safalstha.com.np'
 ]
 
 ROOT_URLCONF = 'Late_Blight_Backend.urls'
