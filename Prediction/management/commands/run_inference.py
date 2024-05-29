@@ -131,7 +131,7 @@ class Command(BaseCommand):
                         WeatherPrediction.objects.create(
                             longitude=row['Longitude'],
                             latitude=row['Latitude'],
-                            place_name = row['Municipality'],
+                            place_name = row['Location'],
                             predicted_weather=y_pred_denormalized[:, index].tolist(),
                             wart_probability = wart_disease_chance(y_pred_denormalized[:, index].tolist()),
                             bacterial_wilt_probability = bacterial_wilt_disease_chance(y_pred_denormalized[:, index].tolist()),
