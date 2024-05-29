@@ -16,8 +16,8 @@ class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
         stations_path = 'static/Stations/stations.txt'
-        locations_path = "static/Locations/final_locations.csv"
-        # locations_path_1 = "static/Locations/municipalities.csv"
+        locations_path = "static/Locations/locations.csv"
+        municipalities_path = "static/Locations/municipalities.csv"
 
         weights_path = 'static/Model_60Lags_STConv_Best_Feb18.pt'
         edge_index_path = 'static/Graph/edge_index.pt'
@@ -38,8 +38,8 @@ class Command(BaseCommand):
                 df, mean_values, std_values = normalizeTestData(process_locations_and_return_csv(locations_path), mean_file_path, std_file_path)
                 # df, mean_values, std_values = normalizeTestData(test_file_path, mean_file_path, std_file_path)
                 snapshot = get_features(df, stations)
-                for i, item in enumerate(snapshot):
-                    print(f"Item {i} shape: {np.shape(item)}")
+                # for i, item in enumerate(snapshot):
+                #     print(f"Item {i} shape: {np.shape(item)}")
                 snapshot = np.array(snapshot)
                 snap_transpose = np.transpose(snapshot, (1, 0, 2))
 
@@ -127,11 +127,12 @@ class Command(BaseCommand):
 
                 wart_disease_chance(y_pred_denormalized[:, 1].tolist())
                 try:
+                    muni = pd.read_csv(municipalities_path)
                     for index, row in df_locations.iterrows():
                         WeatherPrediction.objects.create(
                             longitude=row['Longitude'],
                             latitude=row['Latitude'],
-                            place_name = row['Location'],
+                            place_name = muni['Municipality'][index],
                             predicted_weather=y_pred_denormalized[:, index].tolist(),
                             wart_probability = wart_disease_chance(y_pred_denormalized[:, index].tolist()),
                             bacterial_wilt_probability = bacterial_wilt_disease_chance(y_pred_denormalized[:, index].tolist()),
