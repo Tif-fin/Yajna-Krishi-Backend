@@ -29,10 +29,10 @@ class Command(BaseCommand):
         pred_seq = 24
 
         def perform_inference():
-            current_date = datetime.today().date()
+            current_date = datetime.now().date()
             latest_data = WeatherPrediction.objects.filter(prediction_date=current_date)
             if  latest_data:
-                print("Latest data is already available")
+                print(f"Latest data is already available {current_date}")
             else:
                 stations = get_stations(stations_path)
                 df, mean_values, std_values = normalizeTestData(process_locations_and_return_csv(locations_path), mean_file_path, std_file_path)
