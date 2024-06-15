@@ -5,6 +5,7 @@ from django.core.files.base import ContentFile
 from django.conf import settings
 from .late_blight_segmentation import LateBlightSegmentation
 import os 
+import cv2
 
 @api_view(['POST'])
 def late_blight_segmentation(request):
@@ -18,7 +19,7 @@ def late_blight_segmentation(request):
     
     # Process the uploaded file
     try:
-        processed_image = late_blight_segmentation.segmentation(uploaded_file)  # Replace with actual processing logic
+        (processed_image, diseases) = late_blight_segmentation.segmentation(uploaded_file)  # Replace with actual processing logic
     except Exception as e:
         return JsonResponse({'error': str(e)}, status=500)
     
@@ -27,10 +28,16 @@ def late_blight_segmentation(request):
     processed_image_path = os.path.join(settings.MEDIA_ROOT, processed_image_name)
     
     try:
-        with default_storage.open(processed_image_path, 'wb') as destination:
-            destination.write(processed_image.read())
+        # Save the processed image using OpenCV's imwrite function
+        cv2.imwrite(processed_image_path, processed_image)
     except Exception as e:
         return JsonResponse({'error': f'Failed to save processed image: {str(e)}'}, status=500)
     
     # Return success response
-    return JsonResponse({'success': 'Processed image saved successfully', 'processed_image_url': settings.MEDIA_URL + processed_image_name})
+    # Disease is a list of unique diseases predicted in the image
+    class_colors = {
+    'earlyblight' : 'Green',
+    'lateblight' : 'Blue',
+    'leafminer' : 'Red'
+}
+    return JsonResponse({'success': 'Processed image saved successfully', 'processed_image_url': settings.MEDIA_URL + processed_image_name, 'diseases': diseases, 'class_colors': class_colors})
