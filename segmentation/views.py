@@ -6,6 +6,7 @@ from django.conf import settings
 from .late_blight_segmentation import LateBlightSegmentation
 import os 
 import cv2
+import uuid
 
 @api_view(['POST'])
 def late_blight_segmentation(request):
@@ -24,7 +25,7 @@ def late_blight_segmentation(request):
         return JsonResponse({'error': str(e)}, status=500)
     
     # Generate a file name and save the processed image to the media directory
-    processed_image_name = 'processed_image.png'  # Adjust file name as needed
+    processed_image_name = f'{str(uuid.uuid4())}.png'
     processed_image_path = os.path.join(settings.MEDIA_ROOT, processed_image_name)
     
     try:
