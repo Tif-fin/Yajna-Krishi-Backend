@@ -41,4 +41,4 @@ def late_blight_segmentation(request):
     'lateblight' : 'Blue',
     'leafminer' : 'Red'
 }
-    return JsonResponse({'success': 'Processed image saved successfully', 'processed_image_url': settings.MEDIA_URL + processed_image_name, 'diseases': diseases, 'class_colors': class_colors})
+    return JsonResponse({'success': 'Processed image saved successfully', 'processed_image_url': '/segmentation'+settings.MEDIA_URL + processed_image_name, 'diseases': diseases, 'class_colors': class_colors})
