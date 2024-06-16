@@ -92,5 +92,7 @@ class LateBlightSegmentation:
         
         # convert the set to a list
         unique_diseases = list(unique_diseases)
+         #convert this into rgb
+        rgb_overlay = cv2.cvtColor(src=overlay_image,code=cv2.COLOR_BGR2RGB)
 
-        return (overlay_image, unique_diseases)
+        return (rgb_overlay, unique_diseases)
