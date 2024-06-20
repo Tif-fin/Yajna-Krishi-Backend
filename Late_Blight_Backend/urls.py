@@ -24,6 +24,7 @@ urlpatterns = [
     path('prediction/', include('Prediction.urls')),
     path('help/', include('help_about.urls')),
     path('lcc/', include('lcc.urls')),
-    path('segmentation/',include('segmentation.urls'))
+    path('segmentation/',include('segmentation.urls')),
+    path('lcc_ensemble/', include('lcc_ensemble.urls')),
 
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

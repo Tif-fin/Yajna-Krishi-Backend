@@ -21,9 +21,10 @@ For now the app is published by Kathmandu University as a name 'Late Blight' in 
 To run this project locally, follow these steps:
 
 
-1. Navigate to the project directory:
+1. Clone the Repository:
 
     ```
+    
     cd Late_Blight
     ```
 
@@ -38,7 +39,12 @@ To run this project locally, follow these steps:
     pip3 install -r requirements.txt
     ```
 
-3. Make and Apply migrations:
+3. Make media folder
+    ```
+    mkdir media
+    ```
+
+4. Make and Apply migrations:
 
     ```
     python3 manage.py makemigrations Auth
@@ -52,13 +58,13 @@ To run this project locally, follow these steps:
     python3 manage.py migrate
     ```
 
-4. Create a superuser (optional):
+5. Create a superuser (optional):
 
     ```
     python3 manage.py createsuperuser
     ```
 
-5. Start the development server:
+6. Start the development server:
 
     ```
     python3 manage.py runserver
@@ -68,7 +74,7 @@ To run this project locally, follow these steps:
     python3 manage.py crontab add
     ```
 
-6. Access the project at `http://localhost:8000` in your web browser.
+7. Access the project at `http://localhost:8000` in your web browser.
 
 ## Usage
 
@@ -92,6 +98,7 @@ Our project follows a typical Django project structure:
 - `app_name1/`, `app_name2/`, etc.: Each represent individual Django apps within the project.
 - `templates/`: Contains HTML templates used by the project.
 - `static/`: Contains static files such as CSS, JavaScript
+- `media/`: Contains all the media file such as Image.
 
 
 ## License

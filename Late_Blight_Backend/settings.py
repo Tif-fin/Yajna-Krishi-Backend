@@ -47,6 +47,8 @@ INSTALLED_APPS = [
     'Auth',
     'Prediction',
     'help_about',
+    'lcc_ensemble',
+    'lcc',
 ]
 
 MIDDLEWARE = [
