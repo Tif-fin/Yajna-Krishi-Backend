@@ -24,8 +24,8 @@ To run this project locally, follow these steps:
 1. Clone the Repository:
 
     ```
-    
-    cd Late_Blight
+    git clone https://github.com/Tif-fin/Yajna-Krishi-Backend.git
+    cd Yajna-Krishi-Backend
     ```
 
 2. Install dependencies:
@@ -86,6 +86,10 @@ Once the project is set up, you can start using it. Here are some common tasks y
 /api/user-info/
 /prediction/lateblight/all
 /prediction/lateblight/data?lat=28&long=80
+/segmentation/lateblight/
+/lcc/new/
+/lcc/download/
+/lcc_ensemble/predict/
 ```
 
 ## Project Structure
