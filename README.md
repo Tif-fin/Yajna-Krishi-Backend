@@ -25,10 +25,13 @@ To run this project locally, follow these steps:
 
     ```
     git clone https://github.com/Tif-fin/Yajna-Krishi-Backend.git
-    cd Yajna-Krishi-Backend
     ```
+    Change directory into cloned repo
+   ```
+   cd Yajna-Krishi-Backend
+   ```
 
-2. Install dependencies:
+3. Install dependencies:
     (as there are some lib that depends in torch)
 
     ```
@@ -39,12 +42,12 @@ To run this project locally, follow these steps:
     pip3 install -r requirements.txt
     ```
 
-3. Make media folder
+4. Make media folder
     ```
     mkdir media
     ```
 
-4. Make and Apply migrations:
+5. Make and Apply migrations:
 
     ```
     python3 manage.py makemigrations Auth
@@ -58,13 +61,13 @@ To run this project locally, follow these steps:
     python3 manage.py migrate
     ```
 
-5. Create a superuser (optional):
+6. Create a superuser (optional):
 
     ```
     python3 manage.py createsuperuser
     ```
 
-6. Start the development server:
+7. Start the development server:
 
     ```
     python3 manage.py runserver
@@ -74,7 +77,7 @@ To run this project locally, follow these steps:
     python3 manage.py crontab add
     ```
 
-7. Access the project at `http://localhost:8000` in your web browser.
+8. Access the project at `http://localhost:8000` in your web browser.
 
 ## Usage
 
